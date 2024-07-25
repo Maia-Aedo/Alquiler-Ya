@@ -1,8 +1,24 @@
-# React + Vite
+> [!NOTE]
+> Aplicación en desarrollo 2024-2025
+# Alquiler-Ya
+Proyecto grupal para prácticas profesionalizantes II - TSDSFS 2do año ITS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Integrantes:
+Aedo Maia  
+  _Maia-Aedo_ |
+  _aedomaia10@gmail.com_
 
-Currently, two official plugins are available:
+Azócar Lucas  
+   _Luketa16_ |
+  _lucasazocar7@gmail.com_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Diaz Victoria  
+  _toia-19_ |
+  _victoriaangelinadiaz@gmail.com_
+
+Ulloa Melina  
+  _MeliUlloa_ |
+  _melinaulloa98@gmail.com_
+
+>[!CAUTION]
+>TODOS LOS DERECHOS RESERVADOS
