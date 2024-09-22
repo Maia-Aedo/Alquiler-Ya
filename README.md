@@ -1,6 +1,7 @@
 # AlquilerYa
 > [!NOTE]
 > Aplicación en desarrollo 2024-2025
+
 >[!CAUTION]
 >TODOS LOS DERECHOS RESERVADOS
 Proyecto grupal para prácticas profesionalizantes II - TSDSFS 2do año ITS
