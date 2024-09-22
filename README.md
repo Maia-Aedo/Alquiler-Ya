@@ -4,6 +4,7 @@
 
 >[!CAUTION]
 >TODOS LOS DERECHOS RESERVADOS
+
 Proyecto grupal para prácticas profesionalizantes II - TSDSFS 2do año ITS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16
