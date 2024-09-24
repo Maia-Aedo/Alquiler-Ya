@@ -4,10 +4,18 @@
 /* Definición de colores globales */
 :root{
     /* Colores monocromáticos */
-    --black: black;
-    --white: white;
+    --black: #0000;
+    --white: #FFFF;
 
     /* Paleta de colores */
-    --turquesa: #3DA1B8;
-    --lima: #D5F092;
+    --primary: #3DA1B8;
+    --primary-lighter: #5ABACF;
+    --primary-darker: #368597;
+
+    --secondary: #D5F092;
+    --secondary-lighter: #DCF795;
+    --secondary-darker: #BFD683;
+
+    /* Sombras */
+    --surface: rgb(228, 228, 228);
 }
