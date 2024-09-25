@@ -253,9 +253,9 @@
 
 /* PROPIETARIO DIVIDER */
 .parallax {
-    margin-top: 40px;
+    margin-top: 30px;
     background-image: url('../../../../../assets/images/inicio/banner.jpg');
-    height: 260px;
+    height: 280px;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
