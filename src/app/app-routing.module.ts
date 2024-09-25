@@ -9,6 +9,9 @@ const routes: Routes = [
   // carga perezosa | lazy loading
   {
     path: "", loadChildren: ()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
+  },
+  {
+    path: "", loadChildren: ()=>import('./modules/publicaciones/publicaciones.module').then(m=>m.PublicacionesModule)
   }
 ];
 
