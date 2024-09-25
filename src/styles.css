@@ -1,12 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+/* Importación a paquetería de íconos de Bootstrap */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+/* Definición de colores globales */
 :root{
-    --primary: #3da1b8;
-    --primary-lighter: #5abacf;
+    /* Colores monocromáticos */
+    --black: #0000;
+    --white: #FFFF;
+
+    /* Paleta de colores */
+    --primary: #3DA1B8;
+    --primary-lighter: #5ABACF;
     --primary-darker: #368597;
-    --white: #fff;
-    --black: #000;
+
+    --secondary: #D5F092;
+    --secondary-lighter: #DCF795;
+    --secondary-darker: #BFD683;
+
+    /* Sombras */
     --surface: rgb(228, 228, 228);
-    --secondary: #d5f092;
-    --secondary-lighter: #d6ee99;
-    --secondary-darker: #bfd683;
 }
