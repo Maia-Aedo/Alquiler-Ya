@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { InicioRoutingModule } from './inicio-routing.module';
 
 // componente de vista
-import { InicioComponent } from './pages/inicio/inicio.component';
+import { InicioComponent } from './page/inicio/inicio.component';
 
 
 @NgModule({
