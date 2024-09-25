@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { PublicacionesRoutingModule } from './publicaciones-routing.module';
+// RUTA -> Archivo de rutas hijas del módulo
+import { PublicacionRoutingModule } from './publicacion-routing.module';
 
 // VISTAS -> Seleccionada
-import { SeleccionadaComponent } from './pages/seleccionada/seleccionada.component';
+import { SeleccionadaComponent } from './page/seleccionada/seleccionada.component';
 
 // COMPONENTES -> Sección por lugar
-import { SeccionComponent } from './components/seccion/seccion.component';
-
+import { SeccionComponent } from './component/seccion/seccion.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +17,11 @@ import { SeccionComponent } from './components/seccion/seccion.component';
   ],
   imports: [
     CommonModule,
-    PublicacionesRoutingModule
+    PublicacionRoutingModule
   ],
   exports: [
     SeleccionadaComponent,
     SeccionComponent
   ]
 })
-export class PublicacionesModule { }
+export class PublicacionModule { }
