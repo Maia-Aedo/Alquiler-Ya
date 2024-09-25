@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SeleccionadaComponent } from './pages/seleccionada/seleccionada.component';
+
+import { SeleccionadaComponent } from './page/seleccionada/seleccionada.component';
 
 const routes: Routes = [
   {
@@ -12,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PublicacionesRoutingModule { }
+export class PublicacionRoutingModule { }
