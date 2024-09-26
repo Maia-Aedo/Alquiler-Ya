@@ -1,9 +1,9 @@
-<nav class="navbar navbar-expand-lg navbar-primary bg-primary">
+<nav class="navbar navbar-expand-lg navbar-light bg-light text-center">
   <div class="container">
     <a class="navbar-brand" href="/">
       <img
         src="../../../../assets/logo/logoAzul2-AlquilerYa!.png"
-        height="30"
+        height="50"
       />
     </a>
 
@@ -15,13 +15,29 @@
       <span class="navbar-toggler-icon"> </span>
     </button>
 
-    <div class="collapse navbar-collapse" id="mi-menu">
+    <div class="collapse navbar-collapse justify-content-center" id="mi-menu">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="#">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Alquileres</a>
+
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Alquileres
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Mi propiedad</a>
@@ -35,7 +51,8 @@
 </nav>
 
 <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
-  integrity="sha384-mQ93YL3aNz5W+pLCepmxI2Lv5Nj5ie0frDsqadfXnqZjXtmFEXVxs5JHCe6fPR7M"
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pp5gjKTOCcvbJts8xfV4J33H9CEiS29lbTLmrbrgYSO2dGRWlWONgwi/t59CFpVG"
   crossorigin="anonymous"
 ></script>
+
