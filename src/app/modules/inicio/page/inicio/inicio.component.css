@@ -1,0 +1,298 @@
+/* PARALLAX HEADER */
+.parallax {
+    background-image: url('../../../../../assets/images/inicio/banner.jpg');
+    height: 70vh;
+    background-size: cover;
+    background-position-y: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.v-center {
+    height: 400px;
+    align-content: center;
+}
+
+/* RESPONSIVE HEADER */
+@media (max-width: 768px) {
+    .parallax {
+        background-attachment: scroll;
+        /* desactiva el parallax en dispositivos móviles */
+        background-size: cover;
+    }
+}
+
+/* CARDS */
+.cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    flex-wrap: wrap;
+    max-width: 820px;
+    height: 300px;
+    margin-top: 60px;
+    gap: 75px;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.card {
+    transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+    background-color: var(--white);
+    width: 180px;
+    height: 250px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0px 13px 10px -7px rgba(6, 39, 129, 0.521);
+    border: var(--primary) solid 1px;
+    align-self: center !important;
+}
+
+.card--1 .card__img,
+.card--1 .card__img--hover {
+    background-image: url('../../../../../assets/images/inicio/beach.jpeg');
+}
+
+.card--2 .card__img,
+.card--2 .card__img--hover {
+    background-image: url('../../../../../assets/images/inicio/city.jpeg');
+}
+
+.card--3 .card__img,
+.card--3 .card__img--hover {
+    background-image: url('../../../../../assets/images/inicio/cabin.jpeg');
+}
+
+.card--4 .card__img,
+.card--4 .card__img--hover {
+    background-image: url('../../../../../assets/images/inicio/house.jpeg');
+}
+
+.card__img {
+    visibility: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 255px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card__info-hover {
+    position: absolute;
+    padding: 16px;
+    width: 100%;
+    opacity: 0;
+    top: 0;
+}
+
+.card__img--hover {
+    transition: 0.2s all ease-out;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    position: absolute;
+    height: 255px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    top: 0;
+
+}
+
+.card__info {
+    z-index: 2;
+    background-color: var(--white);
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    padding: 16px 18px 18px 18px;
+}
+
+.card_title {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.card:hover {
+    box-shadow: 0px 30px 18px -8px rgba(6, 39, 129, 0.521);
+    transform: scale(1.10, 1.10);
+}
+
+.card:hover .card__img--hover {
+    height: 100%;
+    opacity: 0.3;
+}
+
+.card:hover .card__info {
+    background-color: transparent;
+    position: relative;
+}
+
+.card:hover .card__info-hover {
+    opacity: 1;
+}
+
+.text-center {
+    align-content: center;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+
+/* DIVIDER */
+#divider {
+    background: rgba(160, 157, 157, 0.176);
+    padding: 2px;
+    margin-bottom: 15px;
+}
+
+#icon {
+    margin: 0;
+}
+
+.text-cont {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* BLOG CARDS */
+.blog-card-blog {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.blog__container {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.card-blog-container{
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.row{
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.blog-card {
+    margin-bottom: 30px;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.87);
+    background: var(--white);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.blog-text{
+    font-weight: 800;
+}
+
+.blog-card .blog-card-image {
+    height: 60%;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+.blog-card .blog-table {
+    padding: 15px 30px;
+}
+
+.blog-table {
+    margin-bottom: 0px;
+}
+
+.blog-card-blog .blog-card-caption {
+    margin-top: 5px;
+}
+
+.blog-card-caption,
+.blog-card-caption a {
+    color: #333;
+    text-decoration: none;
+}
+
+.blog-card-description {
+    color: #3C4857;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.ftr {
+    margin-top: 15px;
+}
+
+.blog-card .ftr .author {
+    color: #888;
+}
+
+.blog-card .ftr div {
+    display: inline-block;
+}
+
+.blog-card .author .avatar {
+    width: 36px;
+    height: 36px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* PROPIETARIO DIVIDER */
+.parallax {
+    margin-top: 30px;
+    background-image: url('../../../../../assets/images/inicio/banner.jpg');
+    height: 280px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.register-btn {
+    padding: 10px 20px;
+    background-color: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.register-btn:hover {
+    background-color: var(--secondary-darker);
+    color: var(--primary-darker);
+}

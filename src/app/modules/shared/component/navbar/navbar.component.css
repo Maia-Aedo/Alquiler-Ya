@@ -81,3 +81,7 @@ ul li a:hover{
     border-bottom-left-radius: 5px;
     border-top-left-radius: 5px;
 }
+
+.navbar{
+    font-weight: 600;
+}
