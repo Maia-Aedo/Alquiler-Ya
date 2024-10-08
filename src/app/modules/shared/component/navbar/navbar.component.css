@@ -1,6 +1,5 @@
-
 /* Contenido principal del navegador; estilos generales */
 
-navbar{
-    text-align: center;
+.navbar{
+    font-weight: 600;
 }
