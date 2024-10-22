@@ -38,6 +38,8 @@
 .titulo {
     font-family: "Phudu", sans-serif;
     font-weight: 600;
+
+    text-align: center;
 }
 
 .subtitulo {
