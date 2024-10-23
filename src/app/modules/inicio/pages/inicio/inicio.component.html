@@ -1,186 +1,236 @@
 <!-- IMG BANNER -->
-<header class="container-fluid parallax" id="section1">
-    <div class="v-center">
-        <!-- <p class="text-center">
-            <br>
-            <a href="#" class="btn btn-lg btn-huge lato" data-toggle="modal" data-target="#myModal">Registrarme</a>
-        </p> -->
+<header class="container-fluid" id="header">
+    <img class="header-img" src="../../../../../assets/images/inicio/banner.png" alt="header casa">
+    <div class="text-header">
+        <h1>Encuentra la estadía perfecta para tu próxima aventura</h1>
+        <p>Estamos listos para ayudarte a alquilar con facilidad y confort desde cualquier lugar</p>
+        <button class="header_btn"><a href="#cards">Empezar</a></button>
+        <!-- BUSCADOR -->
+        <div class="search-container">
+            <div class="search">
+                <div class="field">
+                    <label for="location">Localidad</label>
+                    <input type="text" id="location" placeholder="Ingresa ciudad">
+                </div>
+                <div class="field">
+                    <label for="type">Hospedaje</label>
+                    <input type="text" id="type" placeholder="Casa, departamento...">
+                </div>
+                <button class="search-button">Search</button>
+            </div>
+        </div>
     </div>
 </header>
 <!-- CARDS -->
-<div class="text-center">
-    <h1 class="cards-text">El mejor lugar para tu estilo</h1>
-</div>
-<section class="cards">
-    <article class="card card--1">
-        <div class="card__img"></div>
-        <a href="#" class="card_link">
-            <div class="card__img--hover"></div>
+<div class="container mt-5">
+    <div class="card-columns">
+        <a class="card card-reveal" href="#">
+            <img class="card-img-top" src="../../../../../assets/images/inicio/beach.jpeg" />
+            <div class="card-body">
+                <div class="card-title">Playa</div>
+            </div>
         </a>
-        <div class="card__info">
-            <h3 class="card__title">Playa</h3>
-        </div>
-    </article>
 
-    <article class="card card--2">
-        <div class="card__img"></div>
-        <a href="#" class="card_link">
-            <div class="card__img--hover"></div>
+        <a class="card card-reveal" href="#">
+            <img class="card-img-top" src="../../../../../assets/images/inicio/city.jpeg" />
+            <div class="card-body">
+                <div class="card-title">Ciudad</div>
+            </div>
         </a>
-        <div class="card__info">
-            <h3 class="card__title">Ciudad</h3>
-        </div>
-    </article>
 
-    <article class="card card--3">
-        <div class="card__img"></div>
-        <a href="#" class="card_link">
-            <div class="card__img--hover"></div>
+        <a class="card card-reveal" href="#">
+            <img class="card-img-top" src="../../../../../assets/images/inicio/cabin.jpeg" />
+            <div class="card-body">
+                <div class="card-title">Cabaña</div>
+            </div>
         </a>
-        <div class="card__info">
-            <h3 class="card__title">Cabaña</h3>
-        </div>
-    </article>
 
-    <article class="card card--4">
-        <div class="card__img"></div>
-        <a href="#" class="card_link">
-            <div class="card__img--hover"></div>
+        <a class="card card-reveal" href="#">
+            <img class="card-img-top" src="../../../../../assets/images/inicio/house.jpeg" />
+            <div class="card-body">
+                <div class="card-title">Casa</div>
+            </div>
         </a>
-        <div class="card__info">
-            <h3 class="card__title">Casa</h3>
-        </div>
-    </article>
-</section>
-<!-- DIVIDER -->
-<section id="divider">
-    <div class="container text-center">
-        <div class="row mt-3 align-items-end">
-            <div class="col-3">
-                <i aria-hidden="true">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/card-in-use.png" alt="card-in-use" />
-                </i>
-            </div>
-            <div class="col-3">
-                <i id="icon" aria-hidden="true">
-                    <img width="40" height="40" src="https://img.icons8.com/ios/50/security-checked--v1.png"
-                        alt="security-checked--v1" />
-                </i>
-            </div>
-            <div class="col-3">
-                <i id="icon" aria-hidden="true">
-                    <img width="50" height="50" src="https://img.icons8.com/ios/50/id-verified.png" alt="id-verified" />
-                </i>
-            </div>
-            <div class="col-3">
-                <i id="icon" aria-hidden="true">
-                    <img width="50" height="50" src="https://img.icons8.com/sf-regular/50/chat.png" alt="chat" />
-                </i>
-            </div>
-        </div>
     </div>
-    <div class="container text-center">
-        <div class="row mb-3 align-items-center">
-            <div class="col-3">
-                <p class="text-cont">Múltiples medios de pago, cconsultá tu método preferido al finalizar tu reserva.
-                </p>
+
+    <div class="text-center" id="cards">
+        <h1 class="cards-text">El mejor lugar para tu estilo</h1>
+    </div>
+    <section class="cards">
+        <article class="card card--1">
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <h3 class="card__title">Playa</h3>
             </div>
-            <div class="col-3">
-                <p class="text-cont">Tus datos estan protegidos, nadie más que tu podrá accceder a ellos.
-                </p>
+        </article>
+
+        <article class="card card--2">
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <h3 class="card__title">Ciudad</h3>
             </div>
-            <div class="col-3">
-                <p class="text-cont">Propietarios verificados para mayor seguridad.
-                </p>
+        </article>
+
+        <article class="card card--3">
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <h3 class="card__title">Cabaña</h3>
             </div>
-            <div class="col-3">
-                <p class="text-cont">Comunicación directa con propietarios, facilitando el proceso de reserva.
-                </p>
+        </article>
+
+        <article class="card card--4">
+            <div class="card__img"></div>
+            <a href="#" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <h3 class="card__title">Casa</h3>
+            </div>
+        </article>
+    </section>
+    <!-- DIVIDER -->
+    <section id="divider">
+        <div class="container text-center">
+            <div class="row mt-3 align-items-end">
+                <div class="col-3">
+                    <i aria-hidden="true">
+                        <img width="50" height="50" src="https://img.icons8.com/ios/50/card-in-use.png"
+                            alt="card-in-use" />
+                    </i>
+                </div>
+                <div class="col-3">
+                    <i id="icon" aria-hidden="true">
+                        <img width="40" height="40" src="https://img.icons8.com/ios/50/security-checked--v1.png"
+                            alt="security-checked--v1" />
+                    </i>
+                </div>
+                <div class="col-3">
+                    <i id="icon" aria-hidden="true">
+                        <img width="50" height="50" src="https://img.icons8.com/ios/50/id-verified.png"
+                            alt="id-verified" />
+                    </i>
+                </div>
+                <div class="col-3">
+                    <i id="icon" aria-hidden="true">
+                        <img width="50" height="50" src="https://img.icons8.com/sf-regular/50/chat.png" alt="chat" />
+                    </i>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- BLOG CARDS -->
-<section class="blog__container">
-    <div class="text-center">
-        <h1 class="cards-text">Recomendaciones y tips para tu viaje</h1>
-    </div>
-    <div class="card-blog-container">
-        <div class="row mt-5 mb-2">
-            <div class="col-md-4">
-                <div class="blog-card blog-card-blog">
-                    <div class="blog-card-image">
-                        <a href="#"> <img class="img__blog" height="350"
-                                src="../../../../../assets/images/inicio/lasGrutas.jpeg"> </a>
-                        <div class="space"></div>
+        <div class="container text-center">
+            <div class="row mb-3 align-items-center">
+                <div class="col-3">
+                    <p class="text-cont">Múltiples medios de pago, cconsultá tu método preferido al finalizar tu
+                        reserva.
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="text-cont">Tus datos estan protegidos, nadie más que tu podrá accceder a ellos.
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="text-cont">Propietarios verificados para mayor seguridad.
+                    </p>
+                </div>
+                <div class="col-3">
+                    <p class="text-cont">Comunicación directa con propietarios, facilitando el proceso de reserva.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- BLOG CARDS -->
+    <section class="blog__container">
+        <div class="text-center">
+            <h1 class="cards-text">Recomendaciones y tips para tu viaje</h1>
+        </div>
+        <div class="card-blog-container">
+            <div class="row mt-5 mb-2">
+                <div class="col-md-4">
+                    <div class="blog-card blog-card-blog">
+                        <div class="blog-card-image">
+                            <a href="#"> <img class="img__blog" height="350"
+                                    src="../../../../../assets/images/inicio/lasGrutas.jpeg"> </a>
+                            <div class="space"></div>
+                        </div>
+                        <div class="blog-table">
+                            <h4 class="blog-card-caption">
+                                <a href="#">Conoce a las ballenas</a>
+                            </h4>
+                            <p class="blog-card-description">Antes de dejar las grutas debes revisar estos recorridos
+                                para presenciar las hermosas ballenas.</p>
+                            <div class="ftr">
+                                <div class="author">
+                                    <a href="#"> <img src="#" alt="..." class="avatar img-raised"><span>Unknown
+                                            User</span></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="blog-table">
-                        <h4 class="blog-card-caption">
-                            <a href="#">Conoce a las ballenas</a>
-                        </h4>
-                        <p class="blog-card-description">Antes de dejar las grutas debes revisar estos recorridos
-                            para presenciar las hermosas ballenas.</p>
-                        <div class="ftr">
-                            <div class="author">
-                                <a href="#"> <img src="#" alt="..." class="avatar img-raised"><span>Unknown User</span></a>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card blog-card-blog">
+                        <div class="blog-card-image">
+                            <a href="#"> <img class="img__blog" height="350"
+                                    src="../../../../../assets/images/inicio/bariloche.jpeg"> </a>
+                            <div class="space"></div>
+                        </div>
+                        <div class="blog-table">
+                            <h4 class="blog-card-caption">
+                                <a href="#">Actividades en Bariloche</a>
+                            </h4>
+                            <p class="blog-card-description">Si viajas Bariloche y quieres aprovechar tu estadía
+                                al máximo, esta lista de actividades es para ti.</p>
+                            <div class="ftr">
+                                <div class="author">
+                                    <a href="#"> <img src="https://picsum.photos/id/1005/5760/3840" alt="..."
+                                            class="avatar img-raised"><span>Unknown User</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="blog-card blog-card-blog">
+                        <div class="blog-card-image">
+                            <a href="#"> <img class="img__blog" height="350"
+                                    src="../../../../../assets/images/inicio/mendoza.jpeg"> </a>
+                            <div class="space"></div>
+                        </div>
+                        <div class="blog-table">
+                            <h4 class="blog-card-caption">
+                                <a href="#">Recorre Mendoza y sus viñedos</a>
+                            </h4>
+                            <p class="blog-card-description">Ideal para escapar de la ciudad, en esta lista te
+                                detallaremos
+                                las actividades y gourmet que proponen.
+                            </p>
+                            <div class="ftr">
+                                <div class="author">
+                                    <a href="#"> <img src="https://picsum.photos/id/1005/5760/3840" alt="..."
+                                            class="avatar img-raised"><span>Unknown User</span></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="blog-card blog-card-blog">
-                    <div class="blog-card-image">
-                        <a href="#"> <img class="img__blog" height="350"
-                                src="../../../../../assets/images/inicio/bariloche.jpeg"> </a>
-                        <div class="space"></div>
-                    </div>
-                    <div class="blog-table">
-                        <h4 class="blog-card-caption">
-                            <a href="#">Actividades en Bariloche</a>
-                        </h4>
-                        <p class="blog-card-description">Si viajas Bariloche y quieres aprovechar tu estadía
-                            al máximo, esta lista de actividades es para ti.</p>
-                        <div class="ftr">
-                            <div class="author">
-                                <a href="#"> <img src="https://picsum.photos/id/1005/5760/3840" alt="..."
-                                        class="avatar img-raised"><span>Unknown User</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="blog-card blog-card-blog">
-                    <div class="blog-card-image">
-                        <a href="#"> <img class="img__blog" height="350"
-                                src="../../../../../assets/images/inicio/mendoza.jpeg"> </a>
-                        <div class="space"></div>
-                    </div>
-                    <div class="blog-table">
-                        <h4 class="blog-card-caption">
-                            <a href="#">Recorre Mendoza y sus viñedos</a>
-                        </h4>
-                        <p class="blog-card-description">Ideal para escapar de la ciudad, en esta lista te detallaremos 
-                            las actividades y gourmet que proponen.
-                        </p>
-                        <div class="ftr">
-                            <div class="author">
-                                <a href="#"> <img src="https://picsum.photos/id/1005/5760/3840" alt="..."
-                                        class="avatar img-raised"><span>Unknown User</span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
-</section>
-<!-- PROPIETARIO DIVIDER --->
-<section class="parallax">
-    <div class="content">
-        <h2>¿Deseas alquilar tu propiedad?</h2>
-        <p>Regístrate y abre tus puertas a ingresos en rentas</p>
-        <button class="register-btn">Deseo registrarme</button>
-    </div>
-</section>
+    </section>
+    <!-- PROPIETARIO DIVIDER --->
+    <section class="parallax-prop">
+        <div class="content">
+            <h2>¿Deseas alquilar tu propiedad?</h2>
+            <p>Regístrate y abre tus puertas a ingresos en rentas</p>
+            <button class="register-btn">Deseo registrarme</button>
+        </div>
+    </section>
