@@ -14,10 +14,6 @@ Aedo Maia
   _Maia-Aedo_ |
   _aedomaia10@gmail.com_
 
-Azócar Lucas  
-   _Luketa16_ |
-  _lucasazocar7@gmail.com_
-
 Diaz Victoria  
   _toia-19_ |
   _victoriaangelinadiaz@gmail.com_
