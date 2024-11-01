@@ -7,12 +7,15 @@
     padding: 10px;
     max-width: 100%;
     overflow: hidden;
+    margin-top: 15px; 
 }
 
 .header-img {
-    margin-left: 50px;
+    margin-left: 40px;
     width: 40%;
-    height: auto;
+    height: 105%;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
 }
 
 .text-header {
@@ -62,8 +65,9 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 700px;
     margin-top: 20px;
+    margin-left: 15px;
 }
 
 .search {
@@ -122,19 +126,20 @@
     }
 }
 
-/* CARDS */
 .text-center {
     align-content: center;
     text-align: center;
     margin-top: 30px;
-    margin-bottom: 0;
+    margin-bottom: 15px;
 }
 
+/* CARDS */
 .card-columns{
-    display: grid;
-    grid-template-columns: repeat(fit, mminmax(400px, 1fr));
-    gap: 20px;
-    margin: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
 }
 
 .card{
@@ -143,6 +148,8 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(88, 88, 131, 0.432);
     transition: transform 0.3s ease-in-out;
+    width: 250px;
+    height: 400px;
 }
 
 .card:hover{
@@ -159,7 +166,7 @@
     transform: scale(1.1);
 }
 
-.card-reveal .card-body {
+.card-body {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -218,7 +225,7 @@
 #divider {
     background: rgba(160, 157, 157, 0.176);
     padding: 2px;
-    margin-bottom: 15px;
+    margin: 15px 0;
 }
 
 #icon {
@@ -231,94 +238,11 @@
     margin-bottom: 20px;
 }
 
-/* BLOG CARDS */
-.blog-card-blog {
-    margin-top: 30px;
-    width: 100%;
-}
-
-.blog__container {
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
-}
-
-.card-blog-container {
-    max-width: 100%;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-.row {
-    margin-right: 0;
-    margin-left: 0;
-}
-
-.blog-card {
-    margin-bottom: 30px;
-    border-radius: 6px;
-    color: rgba(0, 0, 0, 0.87);
-    background: var(--white);
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
-}
-
-.blog-card .blog-card-image {
-    height: 60%;
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    border-radius: 6px;
-    box-shadow: 0 16px 38px -12px rgba(0, 0, 0, 0.56), 0 4px 25px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
-}
-
-.blog-card .blog-table {
-    padding: 15px 30px;
-}
-
-.blog-table {
-    margin-bottom: 0px;
-}
-
-.blog-card-blog .blog-card-caption {
-    margin-top: 5px;
-}
-
-.blog-card-caption,
-.blog-card-caption a {
-    color: #333;
-    text-decoration: none;
-}
-
-.blog-card-description {
-    color: #3C4857;
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.ftr {
-    margin-top: 15px;
-}
-
-.blog-card .ftr .author {
-    color: #888;
-}
-
-.blog-card .ftr div {
-    display: inline-block;
-}
-
-.blog-card .author .avatar {
-    width: 36px;
-    height: 36px;
-    overflow: hidden;
-    border-radius: 50%;
-    margin-right: 5px;
-}
-
 /* PROPIETARIO DIVIDER */
 .parallax-prop {
     margin-top: 30px;
-    height: 280px;
+    height: 350px;
+    background: url(https://postandporch.com/cdn/shop/articles/AdobeStock_209124760.jpg?v=1662575433&width=1440);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -333,7 +257,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: white;
+    color: var(--black);
 }
 
 h2 {
