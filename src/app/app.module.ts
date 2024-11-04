@@ -8,14 +8,19 @@ import { AppComponent } from './app.component';
 // Shared: Contiene contenido global
 import { SharedModule } from './modules/shared/shared.module';
 
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ClarityModule } from "@clr/angular";
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     SharedModule,
+    BrowserAnimationsModule,
+    ClarityModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
