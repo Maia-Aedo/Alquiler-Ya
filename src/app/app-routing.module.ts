@@ -9,6 +9,9 @@ const routes: Routes = [
   // carga perezosa | lazy loading
   {
     path: "", loadChildren: ()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
+  },
+  {
+    path:"", loadChildren:()=>import('./modules/favoritos/favoritos.module').then(m=>m.FavoritosModule)
   }
 ];
 
@@ -18,7 +21,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-/*  
+/*
   la carga perezosa se encarga de renderizar un modulo(contenedor de components), únicamente cargan el
   content de su módulo
   esto facilita la comunicación entre modulos para utilizar sus componentes y evitar cargas muy largas en la app
