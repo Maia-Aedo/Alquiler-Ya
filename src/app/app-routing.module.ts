@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './modules/inicio/page/inicio/inicio.component';
+import { HomeComponent } from './modules/home/pages/home/home.component';
 
 /*  
   La carga perezosa se encarga de renderizar un módulo (contenedor de componentes); sólo cargara el contenido 
@@ -12,16 +12,16 @@ import { InicioComponent } from './modules/inicio/page/inicio/inicio.component';
 
 const routes: Routes = [
   {
-    path: "", component: InicioComponent
+    path: "", component: HomeComponent
   },
   {
-    path: "", loadChildren: ()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
+    path: "", loadChildren: ()=>import('./modules/home/home.module').then(m=>m.HomeModule)
   },
   {
-    path: "", loadChildren: ()=>import('./modules/publicacion/publicacion.module').then(m=>m.PublicacionModule)
+    path: "", loadChildren: ()=>import('./modules/publication/publication.module').then(m=>m.PublicationModule)
   },
   {
-    path: "", loadChildren: ()=>import('./modules/autentificacion/autentificacion.module').then(m=>m.AutentificacionModule)
+    path: "", loadChildren: ()=>import('./modules/authentication/authentication.module').then(m=>m.AuthenticationModule)
   }
 ];
 
