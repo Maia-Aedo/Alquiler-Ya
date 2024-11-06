@@ -6,6 +6,10 @@ import { AuthenticationRoutingModule } from './authentication-routing.module';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 
+import { ClarityModule } from '@clr/angular';
+
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     LoginComponent,
@@ -13,11 +17,17 @@ import { RegisterComponent } from './pages/register/register.component';
   ],
   imports: [
     CommonModule,
-    AuthenticationRoutingModule
+    AuthenticationRoutingModule,
+    ClarityModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   exports: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    ClarityModule,
+    FormsModule,
+    ReactiveFormsModule 
   ]
 })
 export class AuthenticationModule { }
