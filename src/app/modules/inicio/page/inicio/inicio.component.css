@@ -260,14 +260,15 @@
     color: var(--black);
 }
 
-h2 {
+.content h2 {
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
-p {
+.content p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    color: var(--white)
 }
 
 .register-btn {

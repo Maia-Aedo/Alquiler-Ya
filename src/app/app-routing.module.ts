@@ -19,6 +19,9 @@ const routes: Routes = [
   },
   {
     path: "", loadChildren: ()=>import('./modules/publicacion/publicacion.module').then(m=>m.PublicacionModule)
+  },
+  {
+    path: "", loadChildren: ()=>import('./modules/autenticacion/autenticacion.module').then(m=>m.AutenticacionModule)
   }
 ];
 
