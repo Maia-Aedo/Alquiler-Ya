@@ -1,4 +1,10 @@
 /* Estilos generales del footer */
+.row{
+    margin: 0;
+
+    justify-content: center;
+}
+
 .site-footer {
     background-color: var(--primary);
     padding: 45px 0 20px;
@@ -10,10 +16,6 @@
 .site-footer hr {
     border-top-color: #bbb;
     opacity: 0.5
-}
-
-.site-footer hr.small {
-    margin: 20px 0
 }
 
 .site-footer a {
@@ -31,7 +33,8 @@
 }
 
 .footer-links li {
-    display: block
+    display: block;
+    margin-bottom: 1rem;
 }
 
 .footer-links a {
@@ -55,33 +58,14 @@
 
 .site-footer .social-icons a {
     color: var(--white) !important;
-    width: 40px;
     height: 40px;
     line-height: 40px;
-    margin-left: 6px;
     margin-right: 0;
 }
 
 .copyright-text {
     margin: 0;
     text-align: center;
-}
-
-@media (max-width:991px) {
-    .site-footer [class^=col-] {
-        margin-bottom: 30px
-    }
-}
-
-@media (max-width:767px) {
-    .site-footer {
-        padding-bottom: 0
-    }
-
-    .site-footer .copyright-text,
-    .site-footer .social-icons {
-        text-align: center
-    }
 }
 
 .social-icons {
@@ -94,51 +78,28 @@
     text-align: start;
 
     display: block;
-    margin-bottom: 4px
 }
 
-.social-icons a {
-    font-size: 16px;
-    display: inline-block;
-    line-height: 44px;
-    width: 44px;
-    height: 44px;
-    text-align: center;
-    margin-right: 8px;
-    -webkit-transition: all .2s linear;
-    -o-transition: all .2s linear;
-    transition: all .2s linear
+/* Íconos de redes sociales */
+.bi-facebook:hover {
+    color: #0055ff;
 }
 
-.social-icons a:active,
-.social-icons a:focus,
-.social-icons a:hover {
-    color: #29aafe !important;
+.bi-instagram:hover {
+    color: #e311b6;
 }
 
-.social-icons.size-sm a {
-    line-height: 34px;
-    height: 34px;
-    width: 34px;
-    font-size: 14px
+.bi-google:hover {
+    color: #eb0000;
 }
 
-.social-icons a.facebook:hover {
-    color: #3b5998 !important;
+.bi-whatsapp:hover {
+    color: #27d556;
 }
 
-.social-icons a.instagram:hover {
-    color: #f82eff !important;
-}
-
-.social-icons a.google:hover {
-    color: #eb0000 !important;
-}
-
-@media (max-width:767px) {
-    .social-icons li.title {
-        display: block;
-        margin-right: 0;
-        font-weight: 600
+@media (min-width: 750px){
+    /* Oculta línea entre listas */
+    .divider{
+        display: none;
     }
 }

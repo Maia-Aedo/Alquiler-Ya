@@ -2,4 +2,6 @@
 
 .navbar{
     font-weight: 600;
+
+    background-color: var(--primary);
 }
