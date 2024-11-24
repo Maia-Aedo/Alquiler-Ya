@@ -18,7 +18,7 @@ const routes: Routes = [
     path: "", loadChildren: ()=>import('./modules/home/home.module').then(m=>m.HomeModule)
   },
   {
-    path: "", loadChildren: ()=>import('./modules/publication/publication.module').then(m=>m.PublicationModule)
+    path: "", loadChildren: ()=>import('./modules/post/post.module').then(m=>m.PostModule)
   },
   {
     path: "", loadChildren: ()=>import('./modules/authentication/authentication.module').then(m=>m.AuthenticationModule)

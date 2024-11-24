@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-favorite',
-  templateUrl: './favorite.component.html',
-  styleUrls: ['./favorite.component.css']
+  selector: 'app-favourite',
+  templateUrl: './favourite.component.html',
+  styleUrls: ['./favourite.component.css']
 })
-export class FavoriteComponent {
+export class FavouriteComponent {
   favoritos: any[] = [];  // Aquí se guardarán los datos de los favoritos
 
   constructor() { }
