@@ -1,19 +1,27 @@
 import { Component } from '@angular/core';
 
+import { Usuario } from 'src/app/models/usuario';
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent {
-  form = {
+  // Declaración de atributos -> Interfaz Usuario
+  form: Usuario = {
+    uid: '',
     nombre: '',
+    segundonombre: '',
     apellido: '',
-    email: '',
-    telefono: '',
+    telefono: 0,
+    segundotelefono: 0,
     username: '',
+    email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+    rol: 'usuario', // rol por defecto
+    activo: true,
   };
 
   // Propiedad para verificar si las contraseñas coinciden
@@ -22,7 +30,7 @@ export class RegisterComponent {
   }
 
   // Método para manejar el envío del formulario
-  onSubmit(): void {
+  registro(): void {
     if (this.passwordsMatch) {
       // Aquí puedes agregar la lógica de registro
       console.log('Form data:', this.form);

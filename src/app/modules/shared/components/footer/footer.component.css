@@ -63,7 +63,8 @@
 }
 
 .copyright-text {
-    margin: 0
+    margin: 0;
+    text-align: center;
 }
 
 @media (max-width:991px) {
@@ -86,11 +87,13 @@
 .social-icons {
     padding-left: 0;
     margin-bottom: 0;
-    list-style: none
+    list-style: none;
 }
 
 .social-icons li {
-    display: inline-block;
+    text-align: start;
+
+    display: block;
     margin-bottom: 4px
 }
 

@@ -1,15 +1,18 @@
 export interface Usuario {
-    uid: string;
+    uid: string | any;
 
-    cuit: number;
     nombre: string;
     segundonombre?: string;
     apellido: string;
 
     telefono: number;
     segundotelefono?: number;
-    correo: string;
-    contrasena: string;
+
+    username: string;
+    email: string;
+    password: string;
+    confirmPassword: string;
+    rememberMe?: boolean;
 
     rol: string;
     activo: boolean;
