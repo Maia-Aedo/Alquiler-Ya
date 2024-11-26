@@ -1,19 +1,7 @@
 /* Contenido principal del navegador; estilos generales */
 
-.container{
-    text-align: center;
-    height: 60px;
+.navbar{
+    font-weight: 600;
+
+    background-color: var(--primary);
 }
-
-.nav-link {
-  color: #040405 !important; /* Cambia el color del texto del menú */
-}
-.nav-link:hover {
-  color: #0056b3 !important; /* Color al hacer hover */
-}
-
-.navbar-nav .nav-link {
-    padding-right: 50px; /*  Separación de etiquetas "a" Navbar */
-  }
-
-

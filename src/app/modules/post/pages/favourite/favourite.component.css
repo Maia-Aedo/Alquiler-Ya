@@ -1,0 +1,112 @@
+/* favorite.component.css */
+
+/* Contenedor principal */
+.favoritos-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* Título */
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Contenedor de las tarjetas de favoritos */
+.favorito-card {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.favorito-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Imagen del favorito */
+.favorito-img {
+    width: 120px;
+    height: 90px;
+    object-fit: cover;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+/* Información del favorito */
+.favorito-info {
+    flex: 1;
+}
+
+.favorito-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+    color: #333;
+}
+
+.favorito-price {
+    font-size: 16px;
+    color: #e74c3c;
+    margin: 5px 0;
+}
+
+.favorito-location {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Botón de eliminar */
+.remove-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.remove-btn:hover {
+    background-color: #c0392b;
+}
+
+/* Mensaje cuando no hay favoritos */
+.no-favorites-message {
+    text-align: center;
+    color: #888;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+/* Responsive: Para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .favorito-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .favorito-img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .favorito-info {
+        width: 100%;
+    }
+
+    .remove-btn {
+        align-self: flex-end;
+    }
+}

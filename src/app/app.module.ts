@@ -12,7 +12,7 @@ import { FavoritosModule } from './modules/favoritos/favoritos.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 // Componentes locales
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AppRoutingModule } from 'src/app/app-routing.module';
 
 // Metadatos - características del módulo
 @NgModule({
@@ -12,7 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    AppRoutingModule
   ],
   exports: [
     NavbarComponent,

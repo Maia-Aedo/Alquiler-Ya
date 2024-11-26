@@ -1,17 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './modules/inicio/pages/inicio/inicio.component';
+import { HomeComponent } from './modules/home/pages/home/home.component';
+
+/*
+  La carga perezosa se encarga de renderizar un módulo (contenedor de componentes); sólo cargara el contenido
+  que contenga (componentes, servicios, entre otros).
+  - Facilita la comunicación entre módulos para utilizar sus componentes
+  - Facilita el manejo y encapsulación de errores entre módulos
+  - Contribuye a una renderización más rápida en la aplicación
+*/
 
 const routes: Routes = [
   {
-    path: "", component: InicioComponent
-  },
-  // carga perezosa | lazy loading
-  {
-    path: "", loadChildren: ()=>import('./modules/inicio/inicio.module').then(m=>m.InicioModule)
+    path: "", component: HomeComponent
   },
   {
-    path:"", loadChildren:()=>import('./modules/favoritos/favoritos.module').then(m=>m.FavoritosModule)
+    path: "", loadChildren: ()=>import('./modules/home/home.module').then(m=>m.HomeModule)
+  },
+  {
+    path: "", loadChildren: ()=>import('./modules/post/post.module').then(m=>m.PostModule)
+  },
+  {
+    path: "", loadChildren: ()=>import('./modules/authentication/authentication.module').then(m=>m.AuthenticationModule)
+  },
+  {
+    path: "", loadChildren: ()=>import('./modules/about/about.module').then(m=>m.AboutModule)
   }
 ];
 
@@ -19,10 +32,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
 
-/*
-  la carga perezosa se encarga de renderizar un modulo(contenedor de components), únicamente cargan el
-  content de su módulo
-  esto facilita la comunicación entre modulos para utilizar sus componentes y evitar cargas muy largas en la app
-*/
+export class AppRoutingModule { }
