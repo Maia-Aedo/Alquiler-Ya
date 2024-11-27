@@ -1,37 +1,34 @@
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f8f8f8;
+.error-container {
+  height: 100vh; /* Altura completa del viewport */
+  display: flex; /* Flexbox para centrar contenido */
+  flex-direction: column; /* Alinear elementos en columna */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
   text-align: center;
-  padding: 50px;
+  background-color: #f8f9fa; /* Fondo claro */
+  color: #333; /* Texto oscuro */
 }
-h1 {
-  font-size: 3em;
-  color: #333;
+
+.error-title {
+  font-size: 3rem;
+  color: #dc3545; /* Rojo para el título del error */
+  margin-bottom: 20px;
 }
-h2 {
-  font-size: 1.5em;
-  color: #666;
+
+.error-message {
+  font-size: 1.2rem;
+  margin: 20px 0;
 }
-p {
-  font-size: 1.1em;
-  color: #777;
-}
-.button {
-  margin-top: 20px;
+
+.btn {
   padding: 10px 20px;
-  font-size: 1.1em;
-  color: #fff;
-  background-color: #007BFF;
-  border: none;
+  font-size: 1rem;
   border-radius: 5px;
-  cursor: pointer;
+  background-color: var(--primary, #007bff); /* Azul principal */
+  color: white;
+  text-decoration: none;
 }
-.button:hover {
-  background-color: #0056b3;
-}
-footer {
-  font-size: 0.8em;
-  margin-top: 30px;
-  color: #aaa;
+
+.btn:hover {
+  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
 }
