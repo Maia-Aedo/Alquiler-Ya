@@ -1,1 +1,62 @@
-<p>about works!</p>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeSection === 'overview'"
+            (click)="setActiveSection('overview')">
+            Sobre Nosotras
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeSection === 'team'"
+            (click)="setActiveSection('team')">
+            Nuestro Equipo
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeSection === 'goals'"
+            (click)="setActiveSection('goals')">
+            Metas
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Overview Section -->
+      <section *ngIf="activeSection === 'overview'">
+        <h1>Sobre Nosotros</h1>
+        <p>
+          Somos un equipo apasionado por el desarrollo de software. Nuestro objetivo es ofrecer soluciones innovadoras que marquen la diferencia.
+        </p>
+      </section>
+
+      <!-- Team Section -->
+      <section *ngIf="activeSection === 'team'">
+        <h1>Nuestro Equipo</h1>
+        <p>
+          Estamos formadas por un grupo diverso y complementario de desarrolladoras, cada una aportando sus propias habilidades y talentos.
+        </p>
+        <img src="/src/assets/images/equipo/equipo.jpg" alt="Nuestro equipo" class="img-fluid">
+      </section>
+
+      <!-- Goals Section -->
+      <section *ngIf="activeSection === 'goals'">
+        <h1>Nuestras Metas</h1>
+        <p>
+          Aspiramos a crear tecnología inclusiva, eficiente y que transforme ideas en soluciones reales para los desafíos del futuro.
+        </p>
+      </section>
+    </main>
+  </div>
+</div>
+
