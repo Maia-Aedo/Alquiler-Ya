@@ -1,9 +1,288 @@
-<div class="nosotros-container">
-  <h1>Sobre Nosotros</h1>
-  <p>
-    Somos una empresa dedicada a ofrecer soluciones innovadoras y personalizadas
-    para nuestros clientes. Nuestro equipo está compuesto por profesionales apasionados
-    y comprometidos con la excelencia.
-  </p>
-  <img src="assets/nosotros-equipo.jpg" alt="Nuestro equipo" class="nosotros-imagen" />
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeSection === 'overview'"
+            (click)="setActiveSection('overview')"
+          >
+            Sobre Nosotros
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeSection === 'team'"
+            (click)="setActiveSection('team')"
+          >
+            Preguntas frecuentes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            [class.active]="activeSection === 'goals'"
+            (click)="setActiveSection('goals')"
+          >
+            Terminos y condiciones
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+      <!-- Overview Section -->
+      <section *ngIf="activeSection === 'overview'">
+        <div class="about-section">
+          <h2>Quiénes Somos</h2>
+          <p>
+            Somos un grupo de estudiantes apasionados por la tecnología, la
+            innovación y la mejora continua. Nuestra historia comienza en las
+            aulas, donde decidimos unir nuestras habilidades y conocimientos
+            para crear un proyecto que pudiera ayudar a resolver una necesidad
+            real en nuestra comunidad.
+          </p>
+
+          <p>
+            A lo largo de nuestros estudios, nos dimos cuenta de que muchas
+            personas tenían dificultades para encontrar una plataforma que se
+            adaptara completamente a sus necesidades, ya fuera en el ámbito de
+            la búsqueda de viviendas, el alquiler de propiedades o simplemente
+            la falta de información clara y accesible en el sector inmobiliario.
+          </p>
+
+          <p>
+            Por eso, creamos este proyecto: un sitio web que no solo conecta a
+            propietarios e inquilinos, sino que también brinda soluciones
+            prácticas y adaptadas a las demandas del mercado actual. Nuestro
+            enfoque se centra en la facilidad de uso, la accesibilidad y la
+            personalización, asegurando que todos puedan encontrar lo que
+            necesitan con tan solo unos clics.
+          </p>
+
+          <p>
+            Desde el principio, hemos trabajado con el objetivo de proporcionar
+            una plataforma útil, eficiente y confiable, que sea capaz de
+            resolver los problemas que enfrentan tanto arrendadores como
+            inquilinos, adaptándonos a las necesidades cambiantes del sector.
+          </p>
+
+          <h2>Nuestro Compromiso</h2>
+          <p>
+            Como estudiantes, nos hemos comprometido a aprender, mejorar y
+            evolucionar junto con nuestro proyecto. Sabemos que la tecnología
+            avanza rápidamente y que las necesidades de las personas también
+            cambian. Por eso, trabajamos constantemente para hacer que nuestro
+            sitio web sea aún más intuitivo, seguro y completo.
+          </p>
+
+          <p>
+            Lo que nos motiva es ver cómo nuestro esfuerzo y dedicación impactan
+            positivamente en la vida de las personas. Cada propiedad alquilada a
+            través de nuestra plataforma es una confirmación de que estamos en
+            el camino correcto.
+          </p>
+
+          <p>
+            Estamos orgullosos de lo que hemos logrado hasta ahora y emocionados
+            por lo que el futuro nos depara. ¡Gracias por ser parte de nuestra
+            comunidad!
+          </p>
+          <img
+            src="equipo3.jpeg"
+            alt="Nuestro equipo"
+            class="img-fluid"
+          />
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section *ngIf="activeSection === 'team'">
+        <h1>Preguntas Frecuentes (FAQ)</h1>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Cómo puedo buscar propiedades para alquilar en su sitio?
+          </div>
+          <div class="faq-answer">
+            Puedes utilizar nuestra barra de búsqueda ubicada en la parte
+            superior de la página. Filtra por tipo de propiedad, ubicación,
+            precio y otras características para encontrar el alquiler que se
+            ajuste a tus necesidades.
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Necesito registrarme para alquilar una propiedad?
+          </div>
+          <div class="faq-answer">
+            Sí, para completar un alquiler es necesario tener una cuenta en
+            nuestro sitio. Esto nos permite procesar tu solicitud y mantenerte
+            informado sobre el estado de tu alquiler.
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Qué documentos necesito para alquilar una propiedad?
+          </div>
+          <div class="faq-answer">
+            Los documentos requeridos pueden variar según la propiedad, pero
+            generalmente necesitarás una identificación oficial, comprobante de
+            ingresos y referencias personales o laborales. Estos documentos se
+            te pedirán durante el proceso de solicitud.
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Puedo visitar una propiedad antes de alquilarla?
+          </div>
+          <div class="faq-answer">
+            ¡Sí! En la mayoría de los casos, ofrecemos visitas presenciales a
+            las propiedades. Solo necesitas contactar a nuestro equipo para
+            agendar una cita. Algunas propiedades también ofrecen recorridos
+            virtuales.
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Cuál es el proceso para firmar un contrato de alquiler?
+          </div>
+          <div class="faq-answer">
+            Una vez que encuentres la propiedad que deseas alquilar, te
+            enviaremos un contrato digital que podrás revisar y firmar
+            electrónicamente. Nuestro equipo estará disponible para responder
+            cualquier pregunta durante este proceso.
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Cuánto tiempo dura el contrato de alquiler?
+          </div>
+          <div class="faq-answer">
+            La duración del contrato varía según la propiedad y las preferencias
+            del propietario, pero generalmente los contratos de alquiler tienen
+            una duración de 6 a 12 meses. Podrás negociar las condiciones con el
+            propietario antes de firmar el contrato.
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Qué debo hacer si tengo problemas con el alquiler o la propiedad?
+          </div>
+          <div class="faq-answer">
+            Si tienes algún inconveniente con la propiedad o el alquiler, por
+            favor contacta a nuestro servicio de atención al cliente. Nuestro
+            equipo está disponible para ayudarte a resolver cualquier problema
+            relacionado con el alquiler de la propiedad.
+          </div>
+        </div>
+
+        <div class="faq-section">
+          <div class="faq-question">
+            ¿Puedo renovar mi contrato de alquiler?
+          </div>
+          <div class="faq-answer">
+            Sí, la renovación de un contrato de alquiler es posible en muchos
+            casos. Antes de que finalice tu contrato, nuestro equipo se pondrá
+            en contacto contigo para discutir las opciones de renovación,
+            siempre que el propietario esté de acuerdo.
+          </div>
+        </div>
+      </section>
+
+      <!-- Goals Section -->
+      <section *ngIf="activeSection === 'goals'">
+        <h1>Términos y Condiciones</h1>
+        <p>Última actualización: Noviembre 27, 2024</p>
+
+        <p>
+          Bienvenido a nuestro sitio web. Al acceder y utilizar este sitio,
+          usted acepta los siguientes términos y condiciones. Si no está de
+          acuerdo con alguno de estos términos, le rogamos que no utilice
+          nuestro sitio web.
+        </p>
+
+        <h5>1. Aceptación de los Términos</h5>
+        <p>
+          Al utilizar este sitio web, usted acepta cumplir con estos términos y
+          condiciones, junto con nuestra política de privacidad. Nos reservamos
+          el derecho de modificar estos términos en cualquier momento, por lo
+          que le recomendamos que los revise periódicamente.
+        </p>
+
+        <h5>2. Uso del Sitio Web</h5>
+        <p>
+          Este sitio está diseñado para uso personal y no comercial. Usted se
+          compromete a utilizar el sitio de manera legal y responsable. Queda
+          prohibido el uso del sitio para actividades ilegales, fraudulentas o
+          de cualquier otra forma que pueda dañar el buen nombre de la empresa.
+        </p>
+
+        <h5>3. Propiedad Intelectual</h5>
+        <p>
+          Todo el contenido presente en este sitio, incluyendo textos, imágenes,
+          logotipos, gráficos, y software, está protegido por derechos de autor
+          y es propiedad exclusiva de nuestra empresa. No está permitido copiar,
+          distribuir o modificar el contenido sin nuestro consentimiento previo
+          y por escrito.
+        </p>
+
+        <h5>4. Enlaces a Terceros</h5>
+        <p>
+          Este sitio puede contener enlaces a otros sitios web que no están bajo
+          nuestro control. No nos hacemos responsables de los contenidos o
+          prácticas de privacidad de estos sitios de terceros. La inclusión de
+          enlaces no implica que avalemos el contenido de esos sitios.
+        </p>
+
+        <h5>5. Limitación de Responsabilidad</h5>
+        <p>
+          No nos hacemos responsables de cualquier daño directo, indirecto,
+          incidental o consecuente que pueda resultar del uso o la imposibilidad
+          de uso de este sitio web, incluyendo errores en el contenido, pérdidas
+          de datos o cualquier otro daño relacionado.
+        </p>
+
+        <h5>6. Modificaciones del Servicio</h5>
+        <p>
+          Nos reservamos el derecho de modificar o interrumpir el servicio en
+          cualquier momento y sin previo aviso. No seremos responsables ante
+          usted o cualquier tercero por la modificación, suspensión o
+          interrupción del servicio.
+        </p>
+
+        <h5>7. Política de Privacidad</h5>
+        <p>
+          La información que recopilamos a través de este sitio está sujeta a
+          nuestra política de privacidad. Le invitamos a leer nuestra
+          <a href="#">Política de Privacidad</a> para obtener más detalles sobre
+          cómo manejamos sus datos.
+        </p>
+
+        <h5>8. Ley Aplicable</h5>
+        <p>
+          Estos términos y condiciones se regirán e interpretarán de acuerdo con
+          las leyes del país en el que se encuentre nuestra empresa, sin tener
+          en cuenta las disposiciones sobre conflictos de leyes.
+        </p>
+
+        <h5>9. Contacto</h5>
+        <p>
+          Si tiene alguna pregunta sobre estos términos y condiciones, no dude
+          en ponerse en contacto con nosotros a través de nuestro
+          <a href="#">formulario de contacto</a>.
+        </p>
+      </section>
+    </main>
+  </div>
 </div>

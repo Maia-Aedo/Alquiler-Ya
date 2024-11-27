@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./about.component.css']
 })
 export class AboutComponent {
+ activeSection: string = 'overview'; // Sección inicial
 
+  setActiveSection(section: string): void {
+    this.activeSection = section; // Cambia la sección activa
+  }
 }
