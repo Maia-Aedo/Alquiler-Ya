@@ -1,0 +1,9 @@
+main h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}

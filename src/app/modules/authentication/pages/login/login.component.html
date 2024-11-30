@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@clr/icons/clr-icons.min.css">
+
+<div class="login-wrapper">
+    <form class="login" (ngSubmit)="inicioSesion()">
+        <section class="title">
+            <div class="welcome">Inicio de Sesión</div>
+        </section>
+        <div class="login-group">
+            <clr-input-container>
+                <label class="clr-sr-only">E-mail</label>
+                <input type="text" autocomplete="email" name="email" clrInput placeholder="Enter e-mail"
+                    [(ngModel)]="form.email" />
+            </clr-input-container>
+
+            <clr-password-container>
+                <label class="clr-sr-only">contraseña</label>
+                <input type="password" autocomplete="current-password" name="password" clrPassword
+                    placeholder="Enter password" [(ngModel)]="form.password" />
+            </clr-password-container>
+
+            <clr-checkbox-wrapper>
+                <label>Recordarme</label>
+                <input type="checkbox" name="rememberMe" clrCheckbox [(ngModel)]="form.rememberMe" />
+            </clr-checkbox-wrapper>
+            <div class="error active">Usuario o contraseña inválidos</div>
+            <button type="submit" class="btn btn-primary">Iniciar</button>
+            <a href="/register" class="signup">¿No tienes cuenta? Registrarme</a>
+        </div>
+    </form>
+</div>
