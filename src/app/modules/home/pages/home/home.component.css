@@ -224,6 +224,11 @@
         margin-bottom: 0.5rem;
     }
     
+    .content-titulo {
+        color: white;
+        font-weight: bold;
+    }
+
     .content p {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
@@ -471,6 +476,11 @@
         margin-bottom: 0.5rem;
     }
     
+    .content-titulo {
+        color: white;
+        font-weight: bold;
+    }
+
     .content p {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;

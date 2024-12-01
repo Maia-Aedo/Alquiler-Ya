@@ -7,8 +7,6 @@ import { AppComponent } from './app.component';
 
 // Shared: Contiene contenido global
 import { SharedModule } from './modules/shared/shared.module';
-// Favoritos: Contiene sección de favoritos.
-import { FavoritosModule } from './modules/favoritos/favoritos.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +16,6 @@ import { FavoritosModule } from './modules/favoritos/favoritos.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FavoritosModule  // Importamos FavoritosModule aquí para usar ListaComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
