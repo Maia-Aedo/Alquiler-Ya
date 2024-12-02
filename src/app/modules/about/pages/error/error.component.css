@@ -24,11 +24,11 @@
   padding: 10px 20px;
   font-size: 1rem;
   border-radius: 5px;
-  background-color: var(--primary, #007bff); /* Azul principal */
+  background-color: var(--primary-darker);  /* Azul principal */
   color: white;
   text-decoration: none;
 }
 
 .btn:hover {
-  background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+  background-color: var(--primary); /* Azul más oscuro al pasar el mouse */
 }
