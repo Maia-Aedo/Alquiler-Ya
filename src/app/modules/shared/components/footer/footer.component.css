@@ -1,0 +1,105 @@
+/* Estilos generales del footer */
+.row{
+    margin: 0;
+
+    justify-content: center;
+}
+
+.site-footer {
+    background-color: var(--primary);
+    padding: 45px 0 20px;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--white);
+}
+
+.site-footer hr {
+    border-top-color: #bbb;
+    opacity: 0.5
+}
+
+.site-footer a {
+    color: var(--secondary);
+}
+
+.site-footer a:hover {
+    color: var(--secondary-darker);
+    text-decoration: none;
+}
+
+.footer-links {
+    padding-left: 0;
+    list-style: none
+}
+
+.footer-links li {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-links a {
+    color: var(--white);
+}
+
+.footer-links a:active,
+.footer-links a:focus,
+.footer-links a:hover {
+    color: var(--secondary-darker);
+    text-decoration: none;
+}
+
+.footer-links.inline li {
+    display: inline-block
+}
+
+.site-footer .social-icons {
+    text-align: right
+}
+
+.site-footer .social-icons a {
+    color: var(--white) !important;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 0;
+}
+
+.copyright-text {
+    margin: 0;
+    text-align: center;
+}
+
+.social-icons {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.social-icons li {
+    text-align: start;
+
+    display: block;
+}
+
+/* Íconos de redes sociales */
+.bi-facebook:hover {
+    color: #0055ff;
+}
+
+.bi-instagram:hover {
+    color: #e311b6;
+}
+
+.bi-google:hover {
+    color: #eb0000;
+}
+
+.bi-whatsapp:hover {
+    color: #27d556;
+}
+
+@media (min-width: 750px){
+    /* Oculta línea entre listas */
+    .divider{
+        display: none;
+    }
+}

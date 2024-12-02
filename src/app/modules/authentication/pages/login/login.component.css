@@ -1,0 +1,93 @@
+/* Estilos generales para el contenedor del formulario */
+.login-wrapper {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #e9e9e9;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px var(--primary-darker);
+}
+
+.login-group clr-input-container,
+.login-group clr-password-container {
+    margin-bottom: 1.5rem;
+    width: 100% !important;
+}
+
+.login-group clr-input-container label,
+.login-group clr-password-container label {
+    font-weight: bold;
+    color: #333;
+    padding: 6px;
+}
+
+.input-wrapper {
+    width: 90%;
+}
+
+input[clrInput], input[clrPassword] {
+    width: 100% !important;
+    max-width: 90%;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--white);
+    transition: border-color 0.3s;
+}
+
+input[clrInput]::placeholder,
+input[clrPassword]::placeholder {
+    color: #b0b3b8;
+}
+
+input[clrInput]:focus::placeholder,
+input[clrPassword]:focus::placeholder {
+    color: transparent;
+}
+
+input[clrInput]:focus, input[clrPassword]:focus {
+    border-color: #5b8def;
+    outline: none;
+    box-shadow: 0 0 5px rgba(91, 141, 239, 0.3);
+}
+
+/* Estilos de los mensajes de error */
+clr-control-error {
+    color: #d9534f;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+}
+
+/* Estilos del botón de envío */
+button.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: white;
+    background-color: var(--secondary-darker);
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+button.btn-primary:hover:not([disabled]) {
+    background-color: var(--primary-darker);
+    cursor: pointer;
+}
+
+button.btn-primary:disabled {
+    background-color: #77828b;
+    cursor: not-allowed;
+}
+
+/* Animación de error */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25%, 75% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+}
+
+clr-control-error.ng-invalid.ng-touched {
+    animation: shake 0.3s ease-in-out;
+}
