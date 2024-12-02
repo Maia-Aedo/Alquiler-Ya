@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PostComponent } from './pages/post/post.component';
 import { FavouriteComponent } from './pages/favourite/favourite.component';
 
+
 const routes: Routes = [
   {
     path: "post", component: PostComponent

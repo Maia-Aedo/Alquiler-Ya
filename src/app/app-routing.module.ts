@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './modules/home/pages/home/home.component';
 
-/*  
-  La carga perezosa se encarga de renderizar un módulo (contenedor de componentes); sólo cargara el contenido 
+/*
+  La carga perezosa se encarga de renderizar un módulo (contenedor de componentes); sólo cargara el contenido
   que contenga (componentes, servicios, entre otros).
   - Facilita la comunicación entre módulos para utilizar sus componentes
   - Facilita el manejo y encapsulación de errores entre módulos
