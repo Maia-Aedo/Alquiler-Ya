@@ -188,13 +188,14 @@
         margin: 15px 0;
     }
     
-    #icon {
+    .icon {
         margin: 0;
+        width: 2rem;
     }
     
     .text-cont {
         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 18px;
+        font-size: 15px;
         margin-bottom: 20px;
     }
     
@@ -220,11 +221,8 @@
     }
     
     .content h2 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         margin-bottom: 0.5rem;
-    }
-    
-    .content-titulo {
         color: white;
         font-weight: bold;
     }
@@ -372,6 +370,8 @@
         text-align: center;
         margin-top: 30px;
         margin-bottom: 15px;
+
+        align-items: center;
     }    
 
     /* CARDS */
@@ -440,8 +440,9 @@
         margin: 15px 0;
     }
     
-    #icon {
+    .icon {
         margin: 0;
+        width: 3rem;
     }
     
     .text-cont {
@@ -474,13 +475,10 @@
     .content h2 {
         font-size: 2rem;
         margin-bottom: 0.5rem;
-    }
-    
-    .content-titulo {
+
         color: white;
         font-weight: bold;
     }
-
     .content p {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
