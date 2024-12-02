@@ -1,6 +1,7 @@
 // Librerias globales
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +20,8 @@ import { FavoritosModule } from './modules/favoritos/favoritos.module';
     BrowserModule,
     AppRoutingModule,
     SharedModule,
-    FavoritosModule  // Importamos FavoritosModule aquí para usar ListaComponent
+    FavoritosModule,  // Importamos FavoritosModule aquí para usar ListaComponent
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

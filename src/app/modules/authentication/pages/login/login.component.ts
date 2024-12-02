@@ -1,37 +1,44 @@
 import { Component } from '@angular/core';
-
-import { Usuario } from 'src/app/models/usuario';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import { ApiService } from '../../../../services/api.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
-  form: Usuario ={
-    uid: '',
-    nombre: '',
-    segundonombre: '',
-    apellido: '',
-    telefono: 0,
-    segundotelefono: 0,
-    username: '',
-    email: '',
-    password: '',
-    confirmPassword: '',
-    rememberMe: false,
-    rol: '',
-    activo: false,
-  };
+  loginForm: FormGroup;
+  errorMessage: string = '';
 
-   // Método para manejar el envío del formulario
-   inicioSesion(): void {
-    if (this.form.username && this.form.password) {
-      // Lógica para autenticar al usuario
-      console.log('Datos ingresados:', this.form);
-    } else {
-      // Mostrar mensaje de error si falta algún dato
-      console.error('Error en nombre de usuario o contraseña');
+  constructor(private fb: FormBuilder, private apiService: ApiService, private router: Router) {
+    this.loginForm = this.fb.group({
+      usuario: ['', Validators.required],
+      contrasenia: ['', Validators.required],
+    });
+  }
+
+  login(): void {
+    if (this.loginForm.invalid) {
+      this.errorMessage = 'Todos los campos son obligatorios.';
+      return;
     }
+
+    const { username, password } = this.loginForm.value;
+
+    this.apiService.login(username, password).subscribe({
+      next: (response) => {
+        this.apiService.generateJWT(response.token); // Guarda el token en localStorage
+        this.router.navigate(['/dashboard']); // Redirige a home
+      },
+      error: (error) => {
+        if (error.status === 401) {
+          this.errorMessage = 'Datos incorrectos.';
+        } else {
+          this.errorMessage = 'Error en el servidor, intente más tarde.';
+        }
+      },
+    });
   }
 }
