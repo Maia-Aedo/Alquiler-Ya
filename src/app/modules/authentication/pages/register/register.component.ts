@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from '../../../../services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -11,7 +12,7 @@ export class RegisterComponent implements OnInit{
   registerForm!: FormGroup;
   selectedRole = 'cliente'; // Valor por defecto
 
-  constructor(private fb: FormBuilder, private apiService: ApiService) { }
+  constructor(private fb: FormBuilder, private apiService: ApiService, private router: Router ) { }
 
   ngOnInit(): void {
     this.registerForm = this.fb.group({
@@ -25,12 +26,15 @@ export class RegisterComponent implements OnInit{
       dni: [''], // Campo opcional para clientes
       cuil: [''], // Campo opcional para propietarios
     });
+    // Validaciones para rol
+    this.cambiarRol({ target: { value: this.selectedRole } });
   }
+
   // Dependiendo el rol activa/desactiva determinados campos
   cambiarRol(event: any): void {
     this.selectedRole = event.target.value;
 
-    // Resetea campos opcionales al cambiar de rol
+    // Actualiza validaciones al cambiar de rol
     if (this.selectedRole === 'cliente') {
       this.registerForm.get('dni')?.setValidators([Validators.required]);
       this.registerForm.get('cuil')?.clearValidators();
@@ -47,9 +51,13 @@ export class RegisterComponent implements OnInit{
 
   registrar(): void {
     if (this.registerForm.invalid) {
+      console.warn('El formulario no es válido');
       return;
     }
+
     const formData = { ...this.registerForm.value };
+
+    // Elimina campos no usados según rol
     if (this.selectedRole === 'cliente') {
       delete formData.cuil; // Elimina campos no usados
     } else if (this.selectedRole === 'propietario') {
@@ -59,13 +67,15 @@ export class RegisterComponent implements OnInit{
       delete formData.cuil;
     }
     // Utilizamos método de registro en la api
-    // this.apiService.post('registrar', formData).subscribe(
-    //   response => {
-    //     console.log('Registro exitoso:', response);
-    //   },
-    //   error => {
-    //     console.error('Error en el registro:', error);
-    //   }
-    // );    
+    this.apiService.register(formData).subscribe({
+      next: response => {
+        console.log('Registro exitoso:', response);
+        // Redirige a la página de inicio después del registro exitoso
+        this.router.navigate(['/home']);
+      },
+      error: error => {
+        console.error('Error en el registro:', error.message || error);
+      }
+    });   
   }
 }
