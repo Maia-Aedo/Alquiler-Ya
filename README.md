@@ -5,7 +5,7 @@
 >[!CAUTION]
 >TODOS LOS DERECHOS RESERVADOS
 
-Proyecto grupal para prácticas profesionalizantes II - TSDSFS 2do año ITS
+Proyecto grupal para prácticas profesionalizantes II - TSDSFS 3er año ITS
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.16
 
@@ -22,8 +22,7 @@ Ulloa Melina
   _MeliUlloa_ |
   _melinaulloa98@gmail.com_
 
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
+# Dependencias:
+* npm install 
+* npm install @angular/cli
+* npm install bootstrap@5.3.6
