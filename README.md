@@ -1,6 +1,6 @@
 # 🏡 Alquiler-Ya
 
-**Alquiler-Ya** es una aplicación web inspirada en plataformas como Airbnb, desarrollada con Angular 17. Permite a usuarios registrarse como clientes o propietarios. Los clientes pueden buscar y reservar alojamientos; los propietarios pueden publicar propiedades con imágenes y gestionar sus anuncios.
+**Alquiler-Ya** es una aplicación web inspirada en plataformas como Airbnb, desarrollada con Angular 16. Permite a usuarios registrarse como clientes o propietarios. Los clientes pueden buscar y reservar alojamientos; los propietarios pueden publicar propiedades con imágenes.
 
 ---
 
