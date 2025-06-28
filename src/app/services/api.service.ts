@@ -13,7 +13,7 @@ import { Observable } from 'rxjs';
 
 export class ApiService {
     // URL BASE
-  private apiUrl = 'https://alquiler-ya-api.onrender.com';
+  private apiUrl = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) {}
 

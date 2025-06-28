@@ -3,9 +3,15 @@
     <form [formGroup]="registerForm" (ngSubmit)="registrar()">
         <label for="nombre">Nombre:</label>
         <input id="nombre" formControlName="nombre" type="text" placeholder="Ingresa tu nombre" required>
+        <div *ngIf="registerForm.get('nombre')?.invalid && registerForm.get('nombre')?.touched">
+            Nombre es requerido.
+        </div>
 
         <label for="apellido">Apellido:</label>
         <input id="apellido" formControlName="apellido" type="text" placeholder="Ingresa tu apellido" required>
+        <div *ngIf="registerForm.get('apellido')?.invalid && registerForm.get('apellido')?.touched">
+            Apellido es requerido.
+        </div>
 
         <label for="email">Correo Electrónico:</label>
         <input id="email" formControlName="email" type="email" placeholder="Ingresa tu correo" required>
