@@ -1,10 +1,10 @@
 .container {
-    max-width: 600px;
-    margin: 5% auto;
+    max-width: 500px;
+    margin: 15px auto;
     padding: 20px;
     background: #ffffff;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 3px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
@@ -15,34 +15,56 @@ h1 {
 }
 
 form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 
 label {
-    font-size: 14px;
+    font-size: 20px;
     margin-bottom: 5px;
     color: #272626;
 }
 
-input, select, button {
-    margin-bottom: 15px;
+input, select{
     padding: 10px;
     font-size: 17px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    width: 100%;
+}
+
+input:focus,
+select:focus {
+  border-color: --var(--primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
 }
 
 button {
     background-color: var(--primary);
     color: var(--white);
     border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
+    padding: 12px;
+    font-size: 1rem;
 }
 
 button:hover {
     background-color: var(--secondary);
+}
+
+button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 4px;
 }
 
 p {
@@ -57,18 +79,4 @@ a {
 
 a:hover {
     text-decoration: underline;
-}
-
-#rol-especifico .cliente,
-#rol-especifico .propietario {
-  display: none;
-}
-
-/* Mostrar campos según el rol */
-#rol[value="cliente"] ~ .cliente {
-  display: block;
-}
-
-#rol[value="propietario"] ~ .propietario {
-  display: block;
 }

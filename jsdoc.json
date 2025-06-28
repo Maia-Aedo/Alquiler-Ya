@@ -1,0 +1,16 @@
+{
+  "source": {
+    "include": ["src/app"],
+    "includePattern": ".ts$",
+    "excludePattern": "(node_modules|dist|test)"
+  },
+  "opts": {
+    "destination": "./docs",
+    "recurse": true,
+    "template": "node_modules/docdash"
+  },
+  "plugins": [],
+  "tags": {
+    "allowUnknownTags": true
+  }
+}

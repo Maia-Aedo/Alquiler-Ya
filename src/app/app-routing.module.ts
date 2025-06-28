@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './modules/home/pages/home/home.component';
+import { LoginComponent } from './modules/authentication/pages/login/login.component';
 
 /*
   La carga perezosa se encarga de renderizar un módulo (contenedor de componentes); sólo cargara el contenido
@@ -12,7 +13,7 @@ import { HomeComponent } from './modules/home/pages/home/home.component';
 
 const routes: Routes = [
   {
-    path: "", component: HomeComponent
+    path: "", component: LoginComponent
   },
   {
     path: "", loadChildren: ()=>import('./modules/home/home.module').then(m=>m.HomeModule)
