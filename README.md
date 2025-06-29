@@ -43,21 +43,27 @@ Facilitar la conexión entre propietarios de alojamientos y potenciales inquilin
 
 ---
 
-## 🧾 Documentación con JSDoc
+## 🧾 Documentación con TypeDoc  
 
-1. **Instalar JsDoc de forma global**
-   ```bash
-   npm install -g jsdoc
-2. **Agregar un script en el `package.json`
-   ```bash
-   "scripts": {
-     "docs": "jsdoc -c jsdoc.json"
-   }
-3. **Generar documentación**
+1. **Generar la documentación**
    ```bash
    npm run docs
-  Se generará una carpeta `docs` con los archivos HTML para abrir en el navegador.
-  
+2. **Visualizar la documentación**
+   Abrí el archivo `docs/index.html` en el navegador o serví localmente la carpeta con un servidor `http-server` 
+   ```bash
+   npx http-server docs
+   
+Configuración utilizada (`typedoc.json`)
+  ```bash
+  {
+    "entryPoints": ["src/app"],
+    "entryPointStrategy": "expand",
+    "out": "docs",
+    "exclude": ["**/*.spec.ts"],
+    "tsconfig": "tsconfig.app.json"
+  }
+  ```
+   
 ---
 
 >[!CAUTION]
