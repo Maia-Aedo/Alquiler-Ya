@@ -9,6 +9,7 @@ import { RegisterComponent } from './pages/register/register.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ClarityModule } from '@clr/angular';
+import { ApiService } from 'src/app/services/api.service';
 
 
 @NgModule({
@@ -29,6 +30,9 @@ import { ClarityModule } from '@clr/angular';
     RegisterComponent,
     FormsModule,
     ReactiveFormsModule 
+  ],
+  providers: [
+    ApiService
   ]
 })
 export class AuthenticationModule { }
