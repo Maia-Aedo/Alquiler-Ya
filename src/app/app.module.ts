@@ -13,28 +13,55 @@ import { environment } from '../enviroments/enviroments'; // vincula a la BD con
 import { AngularFireModule } from '@angular/fire/compat'; // trabaja con las colecciones de información
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; // trabaja con la autentificación
 import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // trabaja con imágenes y archivos
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 /**
- * npm install firebase --force <- fuerza la instalación
- * npm install @angular/fire --save --force
+ * Módulo raíz de la aplicación Angular.
+ * 
+ * Este módulo inicializa:
+ * - El componente principal (`AppComponent`)
+ * - El enrutamiento global (`AppRoutingModule`)
+ * - Animaciones de Angular
+ * - Módulo compartido con componentes globales (`SharedModule`)
+ * - Configuración e integración con Firebase: autenticación, almacenamiento y base de datos
+ *
+ * @export
+ * @class AppModule
  */
-
 @NgModule({
+  /**
+   * Componentes declarados en este módulo.
+   */
   declarations: [
     AppComponent
   ],
+
+  /**
+   * Módulos importados necesarios para la aplicación.
+   */
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // COMPONENTES GLOBALES
+
+    // Módulo con componentes reutilizables a lo largo de la aplicación
     SharedModule,
-    // VINCULACIÓN CON FIREBASE
-    AngularFireModule.initializeApp(environment.firebaseConfig), // Inicializar Firebase dentro del proyecto
+
+    // Inicialización de Firebase con configuración personalizada
+    AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireAuthModule,
     AngularFireStorageModule
   ],
+
+  /**
+   * Proveedores de servicios globales. Actualmente vacío.
+   */
   providers: [],
+
+  /**
+   * Componente que se inicializa al arrancar la aplicación.
+   */
   bootstrap: [AppComponent]
 })
 export class AppModule { }
