@@ -67,7 +67,7 @@ Configuración utilizada (`typedoc.json`)
 ---
 
 ## 🎬 Vídeo explicativo
-https://drive.google.com/file/d/1eezmao4IjUx0pC8XJtwSyoo0N0_WVl6a/view?usp=sharing
+- https://drive.google.com/file/d/1eezmao4IjUx0pC8XJtwSyoo0N0_WVl6a/view?usp=sharing
 
 ---
 
