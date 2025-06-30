@@ -13,8 +13,6 @@ import { environment } from '../enviroments/enviroments'; // vincula a la BD con
 import { AngularFireModule } from '@angular/fire/compat'; // trabaja con las colecciones de información
 import { AngularFireAuthModule } from '@angular/fire/compat/auth'; // trabaja con la autentificación
 import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // trabaja con imágenes y archivos
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
 /**
  * Módulo raíz de la aplicación Angular.
