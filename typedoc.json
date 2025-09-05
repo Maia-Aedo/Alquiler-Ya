@@ -1,0 +1,7 @@
+{
+  "entryPoints": ["src/app"],
+  "entryPointStrategy": "expand",
+  "out": "docs",
+  "exclude": ["**/*.spec.ts"],
+  "tsconfig": "tsconfig.app.json"
+}

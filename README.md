@@ -67,6 +67,42 @@ Configuración utilizada (`typedoc.json`)
 ---
 
 ## 🎬 Vídeo explicativo
+
+- https://drive.google.com/file/d/1eezmao4IjUx0pC8XJtwSyoo0N0_WVl6a/view?usp=sharing
+
+---
+
+>[!CAUTION]
+>TODOS LOS DERECHOS RESERVADOS
+
+## 👤 Integrantes
+Este proyecto fue desarrollado por:
+=======
+
+## 🧾 Documentación con TypeDoc  
+
+1. **Generar la documentación**
+   ```bash
+   npm run docs
+2. **Visualizar la documentación**
+   Abrí el archivo `docs/index.html` en el navegador o serví localmente la carpeta con un servidor `http-server` 
+   ```bash
+   npx http-server docs
+   
+Configuración utilizada (`typedoc.json`)
+  ```bash
+  {
+    "entryPoints": ["src/app"],
+    "entryPointStrategy": "expand",
+    "out": "docs",
+    "exclude": ["**/*.spec.ts"],
+    "tsconfig": "tsconfig.app.json"
+  }
+  ```
+   
+---
+
+## 🎬 Vídeo explicativo
 - https://drive.google.com/file/d/1eezmao4IjUx0pC8XJtwSyoo0N0_WVl6a/view?usp=sharing
 
 ---
@@ -80,4 +116,3 @@ Este proyecto fue desarrollado por:
 - **Maia Aedo** – [@Maia-Aedo](https://github.com/Maia-Aedo) – aedomaia10@gmail.com
 - **Victoria Diaz]** – [@toia-19](https://github.com/toia-19) – victoriaangelinadiaz@gmail.com
 - **Melina Ulloa** – [@MeliUlloa](https://github.com/MeliUlloa) – melinaulloa98@gmail.com
-

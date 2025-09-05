@@ -1,82 +1,86 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ApiService } from '../../../../services/api.service';
 import { Router } from '@angular/router';
+import { ApiService } from 'src/app/services/api.service';
 
+/**
+ * Componente responsable del registro de nuevos usuarios en la aplicación.
+ * Proporciona un formulario validado para enviar los datos del nuevo usuario al servidor.
+ *
+ * @component
+ */
 @Component({
-  selector: 'app-register',
+  selector: 'app-register', // Selector utilizado en la plantilla HTML
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.css']
+  styleUrls: ['./register.component.css'],
+  providers: [ApiService],
+  standalone: false
 })
-export class RegisterComponent implements OnInit{
-  registerForm!: FormGroup;
-  selectedRole = 'cliente'; // Valor por defecto
+export class RegisterComponent implements OnInit {
+  /**
+   * Formulario reactivo para capturar los datos del usuario.
+   * @type {FormGroup}
+   */
+  registerForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private apiService: ApiService, private router: Router ) { }
+  /**
+   * Mensaje de error para mostrar si falla el proceso de registro.
+   * @type {string}
+   */
+  errorMessage: string = '';
 
-  ngOnInit(): void {
+  /**
+   * Constructor del componente. Utiliza inyección de dependencias para construir el formulario,
+   * acceder al servicio de API y manejar la navegación.
+   * 
+   * @param {FormBuilder} fb - Utilidad para construir formularios reactivos.
+   * @param {ApiService} apiService - Servicio que comunica con el backend.
+   * @param {Router} router - Servicio para redirigir entre rutas.
+   */
+  constructor(
+    private fb: FormBuilder,
+    private apiService: ApiService,
+    private router: Router
+  ) {
     this.registerForm = this.fb.group({
-      nombre: ['', [Validators.required]],
-      apellido: ['', [Validators.required]],
+      nombre: ['', Validators.required],
+      apellido: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
-      celular: ['', [Validators.required, Validators.pattern(/^\d+$/)]],
-      usuario: ['', [Validators.required]],
-      contrasenia: ['', [Validators.required, Validators.minLength(8)]],
-      rol: ['cliente', [Validators.required]],
-      dni: [''], // Campo opcional para clientes
-      cuil: [''], // Campo opcional para propietarios
+      password: ['', Validators.required],
+      username: ['', Validators.required],
+      celular: ['', Validators.required],
+      tipo_usuario: ['cliente', Validators.required]
     });
-    // Validaciones para rol
-    this.cambiarRol({ target: { value: this.selectedRole } });
   }
 
-  // Dependiendo el rol activa/desactiva determinados campos
-  cambiarRol(event: any): void {
-    this.selectedRole = event.target.value;
+  /**
+   * Método del ciclo de vida que se ejecuta al iniciar el componente.
+   * En este caso, no realiza ninguna acción específica.
+   * 
+   * @returns {void}
+   */
+  ngOnInit(): void { }
 
-    // Actualiza validaciones al cambiar de rol
-    if (this.selectedRole === 'cliente') {
-      this.registerForm.get('dni')?.setValidators([Validators.required]);
-      this.registerForm.get('cuil')?.clearValidators();
-    } else if (this.selectedRole === 'propietario') {
-      this.registerForm.get('cuil')?.setValidators([Validators.required]);
-      this.registerForm.get('dni')?.clearValidators();
-    } else {
-      this.registerForm.get('dni')?.clearValidators();
-      this.registerForm.get('cuil')?.clearValidators();
+  /**
+   * Maneja el envío del formulario de registro. Si es válido, se envían los datos
+   * al servidor. En caso de éxito se redirige al login, en caso de error se informa al usuario.
+   * 
+   * @returns {void}
+   */
+  onSubmit(): void {
+    if (this.registerForm.valid) {
+      const userData = this.registerForm.value;
+
+      this.apiService.register(userData).subscribe({
+        next: (response) => {
+          console.log('Registro exitoso', response);
+          this.router.navigate(['/login']);
+        },
+        error: (err) => {
+          console.error('Error al registrarse', err);
+          this.errorMessage = 'No se pudo registrar. Inténtalo nuevamente.';
+        }
+      });
     }
-    this.registerForm.get('dni')?.updateValueAndValidity();
-    this.registerForm.get('cuil')?.updateValueAndValidity();
-  }
-
-  registrar(): void {
-    if (this.registerForm.invalid) {
-      console.warn('El formulario no es válido');
-      return;
-    }
-
-    const formData = { ...this.registerForm.value };
-
-    // Elimina campos no usados según rol
-    if (this.selectedRole === 'cliente') {
-      delete formData.cuil; // Elimina campos no usados
-    } else if (this.selectedRole === 'propietario') {
-      delete formData.dni;
-    } else {
-      delete formData.dni;
-      delete formData.cuil;
-    }
-    // Utilizamos método de registro en la api
-    // this.apiService.register(formData).subscribe({
-    //   next: response => {
-    //     console.log('Registro exitoso:', response);
-    //     // Redirige a la página de inicio después del registro exitoso
-    //     this.router.navigate(['/home']);
-    //   },
-    //   error: error => {
-    //     console.error('Error en el registro:', error.message || error);
-    //   }
-    // });   
-    this.router.navigate(['/home']);
   }
 }
