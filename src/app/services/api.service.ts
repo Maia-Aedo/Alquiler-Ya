@@ -18,7 +18,7 @@ export class ApiService {
    * @private
    * @type {string}
    */
-  private apiUrl = '/api';
+  private apiUrl = 'http://localhost:3000/api';
 
   /**
    * Constructor con inyección de dependencia de HttpClient.

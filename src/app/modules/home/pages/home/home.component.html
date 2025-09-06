@@ -1,121 +1,106 @@
 <!-- IMG BANNER -->
-<header class="container-fluid" id="header">
-    <img class="header-img" src="https://www.redfin.com/blog/wp-content/uploads/2021/08/220-Maryland-Ave-21122-1.jpg"
-        alt="header casa">
-    <div class="text-header">
+<section id="header" class="hero d-flex align-items-center">
+    <div class="container text-header text-center">
         <h1>Encuentra la estadía perfecta para tu próxima aventura</h1>
-
-        <img class="header-img-sm"
-            src="https://www.redfin.com/blog/wp-content/uploads/2021/08/220-Maryland-Ave-21122-1.jpg" alt="header casa">
-
         <p>Te ayudaremos a encontrar el mejor alojamiento con facilidad y confort desde cualquier lugar</p>
-        <button class="header_btn"><a href="#cards">Empezar</a></button>
+        <button class="btn header_btn">Empezar</button>
 
         <!-- BUSCADOR -->
-        <div class="search-container">
-            <div class="search">
-                <div class="field">
-                    <label for="location">Localidad</label>
-                    <input type="text" id="location" placeholder="Ingresa ciudad">
+        <div class="search-container mt-4 mx-auto">
+            <div class="row g-2 align-items-center">
+                <div class="col-md-5 col-12">
+                    <input type="text" class="form-control" placeholder="Ingresa ciudad" />
                 </div>
-                <div class="field">
-                    <label for="type">Hospedaje</label>
-                    <input type="text" id="type" placeholder="Casa, departamento...">
+                <div class="col-md-5 col-12">
+                    <input type="text" class="form-control" placeholder="Casa, departamento..." />
                 </div>
-                <button class="search-button">Search</button>
+                <div class="col-md-2 col-12">
+                    <button class="btn search-button w-100">Buscar</button>
+                </div>
             </div>
         </div>
     </div>
-</header>
+</section>
 
 <!-- CARDS -->
-<section class="container mt-5">
-    <div class="text-center" id="cards">
-        <h1 class="cards-text">El mejor lugar para tu estilo</h1>
-    </div>
-    <div class="card-columns">
-        <a class="card card-reveal" href="#">
-            <img class="card-img-top" src="../../../../../assets/images/inicio/beach.jpeg" />
-            <div class="card-body">
-                <p class="card-title">Playa</p>
+<section class="container mb-3">
+    <h2 class="text-center mb-4">El mejor lugar para tu estilo</h2>
+    <div class="row g-4">
+        <div class="col-md-3 col-12">
+            <div class="card h-100">
+                <img src="../../../../../assets/images/inicio/house.jpeg" class="card-img" alt="..." />
+                <div class="card-body d-flex align-items-end">
+                    <h5 class="card-title">Casa</h5>
+                </div>
             </div>
-        </a>
-        <a class="card card-reveal" href="#">
-            <img class="card-img-top" src="../../../../../assets/images/inicio/city.jpeg" />
-            <div class="card-body">
-                <div class="card-title">Ciudad</div>
+        </div>
+        <div class="col-md-3 col-12">
+            <div class="card h-100">
+                <img src="../../../../../assets/images/inicio/city.jpg" class="card-img" alt="..." />
+                <div class="card-body d-flex align-items-end">
+                    <h5 class="card-title">Ciudad</h5>
+                </div>
             </div>
-        </a>
-        <a class="card card-reveal" href="#">
-            <img class="card-img-top" src="../../../../../assets/images/inicio/cabin.jpeg" />
-            <div class="card-body">
-                <div class="card-title">Cabaña</div>
+        </div>
+        <div class="col-md-3 col-12">
+            <div class="card h-100">
+                <img src="../../../../../assets/images/inicio/beach.jpg" class="card-img" alt="..." />
+                <div class="card-body d-flex align-items-end">
+                    <h5 class="card-title">Playa</h5>
+                </div>
             </div>
-        </a>
-        <a class="card card-reveal" href="#">
-            <img class="card-img-top" src="../../../../../assets/images/inicio/house.jpeg" />
-            <div class="card-body">
-                <div class="card-title">Casa</div>
+        </div>
+        <div class="col-md-3 col-12">
+            <div class="card h-100">
+                <img src="../../../../../assets/images/inicio/cabin.jpg" height="100%" class="card-img" alt="..." />
+                <div class="card-body d-flex align-items-end">
+                    <h5 class="card-title">Cabaña</h5>
+                </div>
             </div>
-        </a>
+        </div>
     </div>
 </section>
 
 <!-- DIVIDER -->
-<section id="divider">
-    <div class="container text-center">
-        <div class="row mt-3 align-items-end">
-            <div class="col-3">
-                <i aria-hidden="true">
-                    <img class="icon" src="https://img.icons8.com/ios/50/card-in-use.png" alt="card-in-use" />
-                </i>
-            </div>
-            <div class="col-3">
-                <i aria-hidden="true">
-                    <img class="icon" src="https://img.icons8.com/ios/50/security-checked--v1.png"
-                        alt="security-checked--v1" />
-                </i>
-            </div>
-            <div class="col-3">
-                <i aria-hidden="true">
-                    <img class="icon" src="https://img.icons8.com/ios/50/id-verified.png" alt="id-verified" />
-                </i>
-            </div>
-            <div class="col-3">
-                <i aria-hidden="true">
-                    <img class="icon" src="https://img.icons8.com/sf-regular/50/chat.png" alt="chat" />
-                </i>
+<section id="divider" class="container mb-8">
+    <div class="row g-4 text-center justify-content-center">
+        <div class="col-md-3 col-6">
+            <div class="divider-card p-4">
+                <i class="bi bi-credit-card"></i>
+                <h5>Múltiples pagos</h5>
+                <p>Elegí tu método preferido al finalizar la reserva.</p>
             </div>
         </div>
-    </div>
-    <div class="container text-center">
-        <div class="row mb-3">
-            <div class="col-3">
-                <p class="text-cont">Múltiples medios de pago, consultá tu método preferido al finalizar tu
-                    reserva.
-                </p>
+        <div class="col-md-3 col-6">
+            <div class="divider-card p-4">
+                <i class="bi bi-shield-lock"></i>
+                <h5>Seguridad</h5>
+                <p>Tus datos están protegidos y nadie más puede verlos.</p>
             </div>
-            <div class="col-3">
-                <p class="text-cont">Tus datos estan protegidos, nadie más que tu podrá accceder a ellos.
-                </p>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="divider-card p-4">
+                <i class="bi bi-person-check"></i>
+                <h5>Propietarios verificados</h5>
+                <p>Reservá con confianza gracias a perfiles validados.</p>
             </div>
-            <div class="col-3">
-                <p class="text-cont">Propietarios verificados para mayor seguridad.
-                </p>
-            </div>
-            <div class="col-3">
-                <p class="text-cont">Comunicación directa con propietarios, facilitando el proceso de reserva.
-                </p>
+        </div>
+        <div class="col-md-3 col-6">
+            <div class="divider-card p-4">
+                <i class="bi bi-chat-dots"></i>
+                <h5>Comunicación directa</h5>
+                <p>Contactá fácilmente con el propietario antes de reservar.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- PROPIETARIO DIVIDER --->
-<section class="parallax-prop">
-    <div class="content">
-        <h2 class="content-titulo">¿Deseas alquilar tu propiedad?</h2>
-        <p class="content-parrafo">Regístrate y abre tus puertas a ingresos en rentas</p>
-        <button class="register-btn" routerLink="/register">Deseo registrarme</button>
+
+<!-- PROPIETARIO PARALLAX --->
+<section class="parallax-prop d-flex align-items-center justify-content-center">
+    <div class="overlay"></div>
+    <div class="text-center text-white position-relative">
+        <h2>Reserva tu próxima estadía hoy</h2>
+        <button class="btn register-btn mt-3">Deseo registrarme</button>
     </div>
 </section>

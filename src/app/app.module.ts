@@ -7,12 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // IMPORTAMOS COMPONENTES GLOBALES
 import { SharedModule } from './modules/shared/shared.module';
-
-// FIREBASE -> importamos HERRAMIENTAS de la Base de Datos
-import { environment } from '../enviroments/enviroments'; // vincula a la BD con la APP
-import { AngularFireModule } from '@angular/fire/compat'; // trabaja con las colecciones de información
-import { AngularFireAuthModule } from '@angular/fire/compat/auth'; // trabaja con la autentificación
-import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // trabaja con imágenes y archivos
+import { HttpClientModule } from '@angular/common/http';
 
 /**
  * Módulo raíz de la aplicación Angular.
@@ -46,10 +41,7 @@ import { AngularFireStorageModule } from '@angular/fire/compat/storage'; // trab
     // Módulo con componentes reutilizables a lo largo de la aplicación
     SharedModule,
 
-    // Inicialización de Firebase con configuración personalizada
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireAuthModule,
-    AngularFireStorageModule
+    HttpClientModule
   ],
 
   /**
