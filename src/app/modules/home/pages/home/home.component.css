@@ -1,5 +1,5 @@
 section {
-    padding: 70px 0;
+    padding: 67px 0;
 }
 
 #header {
@@ -107,7 +107,10 @@ section {
 }
 
 /* DIVIDER */
-/* DIVIDER */
+#divider {
+    margin-bottom: 75px;
+}
+
 .divider-card {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 15px;

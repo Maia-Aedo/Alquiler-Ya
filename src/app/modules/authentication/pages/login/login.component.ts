@@ -61,7 +61,7 @@ export class LoginComponent {
       this.apiService.login(username, password).subscribe({
         next: (response) => {
           console.log('Login exitoso', response);
-          localStorage.setItem('token', response.token);
+          this.apiService.generateJWT(response.token);
           this.router.navigate(['/home']);
         },
         error: (err) => {

@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './modules/home/pages/home/home.component';
 import { LoginComponent } from './modules/authentication/pages/login/login.component';
+import { authGuard } from './guards/auth.guard';
 
 /**
  * Rutas principales de la aplicación.
@@ -16,10 +17,11 @@ const routes: Routes = [
     path: '', component: LoginComponent
   },
   {
-    path: '', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
+    path: '', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
   },
   {
-    path: '', loadChildren: () => import('./modules/post/post.module').then(m => m.PostModule)
+    path: '', loadChildren: () => import('./modules/post/post.module').then(m => m.PostModule),
+    canActivate: [authGuard]
   },
   {
     path: '', loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule)
