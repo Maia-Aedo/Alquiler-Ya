@@ -49,7 +49,7 @@ export class RegisterComponent implements OnInit {
       password: ['', Validators.required],
       username: ['', Validators.required],
       celular: ['', Validators.required],
-      tipo_usuario: ['cliente', Validators.required]
+      rol: ['cliente', Validators.required]
     });
   }
 
