@@ -1,745 +1,225 @@
-@media(min-width: 300px) and (max-width: 600px) {
-    /* HEADER */
-    #header {
-        align-items: center;
-        justify-content: center;
-        padding: 10px;
-        max-width: 100%;
-        overflow: hidden;
-    }
-
-    .header-img{
-        display: none;
-    }
-
-    .header-img-sm {
-        display: none;
-    }
-
-    .text-header {
-        width: 100%;
-        text-align: center;
-    }
-
-    .text-header h1 {
-        font-size: 1.5rem;
-        margin: 10px 0;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    .text-header p {
-        font-size: 1.2rem;
-        color: black;
-        margin-bottom: 25px;
-    }
-
-    .header_btn {
-        background-color: var(--primary-darker);
-        border-radius: 5px;
-        color: var(--white);
-        padding: 10px 20px;
-        text-align: center;
-        font-size: 1.1rem;
-        cursor: pointer;
-        border: none;
-        margin-bottom: 15px;
-        transition: background-color 0.3s ease;
-
-        a {
-            text-decoration: none;
-            color: var(--white)
-        }
-    }
-
-    .header_btn:hover {
-        background-color: var(--primary)
-    }
-
-    /* BUSCADOR */
-    .search-container {
-        background-color: #e7e7e7;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        max-width: 90%;
-        margin-top: 15px;
-        margin-left: 15px;
-    }
-
-    .search {
-        display: inline-block;
-        justify-content: center;
-        align-items: flex-end;
-    }
-
-    .field {
-        display: block;
-        flex-direction: column;
-        flex: 1;
-        margin-right: 10px;
-    }
-
-    .field label {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 5px;
-    }
-
-    .field input {
-        margin-bottom: 1rem;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1.1rem;
-    }
-
-    .search-button {
-        padding: 12px 25px;
-        background-color: var(--primary-darker);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .search-button:hover {
-        background-color: var(--primary);
-    }
-    
-    /* CARDS */    
-    .card-columns {
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .card-reveal{
-        display: inline-block;
-    }
-
-    .card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(88, 88, 131, 0.432);
-        transition: transform 0.3s ease-in-out;
-        width: 45%;
-        height: 250px;
-
-        margin: 1rem 0rem 0rem 0.6rem;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-    }
-
-    .card img {
-        width: 100%;
-        height: 100%;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .card:hover img {
-        transform: scale(1.1);
-    }
-
-    .card-body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(88, 88, 131, 0.452);
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out;
-    }
-
-    .card:hover .card-body {
-        opacity: 1;
-    }
-
-    .cards-text{
-        font-size: 1.5rem;
-    }
-
-    .card-title {
-        font-size: 1rem;
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: var(--white);
-    }
-
-    #divider {
-        background: rgba(160, 157, 157, 0.176);
-        padding: 2px;
-        margin: 15px 0;
-    }
-    
-    .icon {
-        margin: 0;
-        width: 2rem;
-    }
-    
-    .text-cont {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 15px;
-        margin-bottom: 20px;
-    }
-    
-    .parallax-prop {
-        margin-top: 30px;
-        height: 350px;
-        background: url(https://postandporch.com/cdn/shop/articles/AdobeStock_209124760.jpg?v=1662575433&width=1440);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    
-    .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: var(--black);
-    }
-    
-    .content h2 {
-        font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-        color: white;
-        font-weight: bold;
-    }
-
-    .content p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        color: var(--white)
-    }
-    
-    .register-btn {
-        padding: 10px 20px;
-        background-color: var(--primary);
-        color: var(--white);
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-    
-    .register-btn:hover {
-        background-color: var(--secondary-darker);
-        color: var(--primary-darker);
-    } 
+section {
+    padding: 70px 0;
 }
 
-@media (min-width: 600px) and (max-width: 900px) {
-    #header {
-        display: flex;
-        height: 80vh;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        max-width: 100%;
-        overflow: hidden;
-        margin-top: 15px;
-    }
+#header {
+    position: relative;
+    height: 90vh;
+    background: url("../../../../../assets/images/inicio/banner.jpg") center/cover no-repeat;
+    color: white;
+    text-align: center;
+}
 
-    .header-img {
-        display: none;
-    }
+#header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2));
+    z-index: 1;
+}
 
-    .header-img-sm{
-        width: 50%;
-        height: 50%;
-        border-top-left-radius: 50%;
-        border-top-right-radius: 50%;
-        margin-bottom: 1rem;
-    }
+.text-header {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
-    .text-header {
-        width: 100%;
-        text-align: center;
-    }
+.text-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
 
+.text-header p {
+    font-size: 1.rem;
+    margin-bottom: 20px;
+    font-weight: semi-bold;
+}
+
+/* BUSCADOR */
+.search-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+.search-button {
+    background: #1da7a1;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: 0.3s;
+}
+
+.search-button:hover {
+    background: #14807b;
+    transform: translateY(-2px);
+}
+
+/* BUTTONS */
+.header_btn,
+.register-btn {
+    border-radius: 50px;
+    padding: 12px 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: #1da7a1;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.header_btn:hover,
+.register-btn:hover {
+    transform: translateY(-3px);
+    background: #14807b;
+}
+
+/* CARDS */
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card-body {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+}
+
+.card-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* DIVIDER */
+/* DIVIDER */
+.divider-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.divider-card i {
+    font-size: 2.5rem;
+    color: #1da7a1;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.divider-card h5 {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.divider-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+/* Hover efecto moderno */
+.divider-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.divider-card:hover i {
+    transform: scale(1.2);
+    color: #14807b;
+}
+
+/* PARALLAX */
+.parallax-prop {
+    position: relative;
+    height: 60vh;
+    background: url("../../../../../assets/images//inicio/parallax.jpg") center/cover fixed no-repeat;
+}
+
+.parallax-prop .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.parallax-prop h2 {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* ------------------ RESPONSIVE---------------- */
+@media (max-width: 992px) {
     .text-header h1 {
         font-size: 2rem;
-        margin: 10px 0;
-        font-weight: bold;
-        margin-bottom: 15px;
     }
 
-    .text-header p {
-        font-size: 1.5rem;
-        color: black;
-        margin-bottom: 25px;
-    }
-
-    .header_btn {
-        background-color: var(--primary-darker);
-        border-radius: 5px;
-        color: var(--white);
-        padding: 10px 20px;
-        text-align: center;
-        font-size: 1.2rem;
-        cursor: pointer;
-        border: none;
-        margin-bottom: 15px;
-        transition: background-color 0.3s ease;
-
-        a {
-            text-decoration: none;
-            color: var(--white)
-        }
-    }
-
-    .header_btn:hover {
-        background-color: var(--primary)
-    }
-
-    /* BUSCADOR */
     .search-container {
-        background-color: #e7e7e7;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        max-width: 700px;
-        margin-top: 20px;
-        margin: auto;
-    }
-
-    .search {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    .field {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        margin-right: 10px;
-    }
-
-    .field label {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 5px;
-    }
-
-    .field input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1.1rem;
-    }
-
-    .search-button {
-        padding: 12px 25px;
-        background-color: var(--primary-darker);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .search-button:hover {
-        background-color: var(--primary);
-    }
-
-    .text-center {
-        align-content: center;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 15px;
-    }    
-
-    /* CARDS */
-    .card-columns {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 40px;
-    }
-
-    .card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(88, 88, 131, 0.432);
-        transition: transform 0.3s ease-in-out;
-        width: 250px;
-        height: 400px;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-    }
-
-    .card img {
-        width: 100%;
-        height: 100%;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .card:hover img {
-        transform: scale(1.1);
-    }
-
-    .card-body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(88, 88, 131, 0.452);
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out;
-    }
-
-    .card:hover .card-body {
-        opacity: 1;
+        padding: 15px;
     }
 
     .card-title {
         font-size: 1rem;
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: var(--white);
-    }
-
-    #divider {
-        background: rgba(160, 157, 157, 0.176);
-        padding: 2px;
-        margin: 15px 0;
-    }
-    
-    #icon {
-        margin: 0;
-    }
-    
-    .text-cont {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    
-    .parallax-prop {
-        margin-top: 30px;
-        height: 350px;
-        background: url(https://postandporch.com/cdn/shop/articles/AdobeStock_209124760.jpg?v=1662575433&width=1440);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    
-    .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: var(--black);
-    }
-    
-    .content h2 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
-    }
-    
-    .content p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        color: var(--white)
-    }
-    
-    .register-btn {
-        padding: 10px 20px;
-        background-color: var(--primary);
-        color: var(--white);
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 1rem;
-    }
-    
-    .register-btn:hover {
-        background-color: var(--secondary-darker);
-        color: var(--primary-darker);
     }
 }
 
-@media (min-width: 900px) {
-    #header {
-        display: flex;
-        height: 80vh;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        max-width: 100%;
-        overflow: hidden;
-        margin-top: 15px;
-    }
-
-    .header-img {
-        margin-left: auto;
-        width: 40%;
-        height: 105%;
-        border-top-left-radius: 50%;
-        border-top-right-radius: 50%;
-    }
-
-    .header-img-sm{
-        display: none;
-    }
-
-    .text-header {
-        width: 100%;
-        text-align: center;
-    }
-
-    .text-header h1 {
+@media (max-width: 768px) {
+    h2 {
+        margin-bottom: 50px;
+        font-weight: 700;
         font-size: 2rem;
-        margin: 10px 0;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
-
-    .text-header p {
-        font-size: 1.5rem;
-        color: black;
-        margin-bottom: 25px;
-    }
-
-    .header_btn {
-        background-color: var(--primary-darker);
-        border-radius: 5px;
-        color: var(--white);
-        padding: 10px 20px;
-        text-align: center;
-        font-size: 1.2rem;
-        cursor: pointer;
-        border: none;
-        margin-bottom: 15px;
-        transition: background-color 0.3s ease;
-
-        a {
-            text-decoration: none;
-            color: var(--white)
-        }
-    }
-
-    .header_btn:hover {
-        background-color: var(--primary)
-    }
-
-    /* BUSCADOR */
-    .search-container {
-        background-color: #e7e7e7;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        max-width: 700px;
-        margin-top: 20px;
-        margin: auto;
-    }
-
-    .search {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-    }
-
-    .field {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        margin-right: 10px;
-    }
-
-    .field label {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 5px;
-    }
-
-    .field input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1.1rem;
-    }
-
-    .search-button {
-        padding: 12px 25px;
-        background-color: var(--primary-darker);
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 1.2rem;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .search-button:hover {
-        background-color: var(--primary);
-    }
-
-    .text-center {
-        align-content: center;
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 15px;
-
-        align-items: center;
-    }    
-
-    /* CARDS */
-    .card-columns {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 30px;
-        margin-bottom: 40px;
     }
 
     .card {
-        position: relative;
-        overflow: hidden;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(88, 88, 131, 0.432);
-        transition: transform 0.3s ease-in-out;
-        width: 250px;
-        height: 400px;
-    }
-
-    .card:hover {
-        transform: translateY(-10px);
-    }
-
-    .card img {
-        width: 100%;
-        height: 100%;
-        transition: transform 0.5s ease-in-out;
-    }
-
-    .card:hover img {
-        transform: scale(1.1);
-    }
-
-    .card-body {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-        text-align: center;
-        background-color: rgba(88, 88, 131, 0.452);
-        opacity: 0;
-        transition: opacity 0.4s ease-in-out;
-    }
-
-    .card:hover .card-body {
-        opacity: 1;
-    }
-
-    .card-title {
-        font-size: 1rem;
-        margin: 0;
-        text-transform: uppercase;
-        font-weight: bold;
-        color: var(--white);
+        margin-bottom: 30px;
     }
 
     #divider {
-        background: rgba(160, 157, 157, 0.176);
-        padding: 2px;
-        margin: 15px 0;
+        margin-top: 80px;
+        margin-bottom: 80px;
     }
-    
-    .icon {
-        margin: 0;
-        width: 3rem;
-    }
-    
-    .text-cont {
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
-    
-    .parallax-prop {
-        margin-top: 30px;
-        height: 350px;
-        background: url(https://postandporch.com/cdn/shop/articles/AdobeStock_209124760.jpg?v=1662575433&width=1440);
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    }
-    
-    .content {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        text-align: center;
-        color: var(--black);
-    }
-    
-    .content h2 {
-        font-size: 2rem;
-        margin-bottom: 0.5rem;
 
-        color: white;
-        font-weight: bold;
+    .parallax-prop {
+        height: 70vh;
     }
-    .content p {
-        font-size: 1.2rem;
-        margin-bottom: 1.5rem;
-        color: var(--white)
+
+    footer {
+        padding: 50px 0 30px;
+        margin-top: 80px;
     }
-    
-    .register-btn {
-        padding: 10px 20px;
-        background-color: var(--primary);
-        color: var(--white);
-        border: none;
-        border-radius: 20px;
-        cursor: pointer;
-        font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+    .text-header h1 {
+        font-size: 1.5rem;
     }
-    
-    .register-btn:hover {
-        background-color: var(--secondary-darker);
-        color: var(--primary-darker);
-    } 
+
+    .text-header p {
+        font-size: 0.9rem;
+    }
+
+    .search-container {
+        box-shadow: none;
+    }
 }
 
 
