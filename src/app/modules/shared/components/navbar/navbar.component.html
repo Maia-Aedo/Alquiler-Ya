@@ -2,7 +2,7 @@
   <div class="container">
     <!-- Logo -->
     <a class="navbar-brand fw-bold" href="/home">
-      <img src="../../../../assets/logo/logoAzul2-AlquilerYa!.png" height="30"/>
+      <img src="../../../../assets/logo/logoAzul2-AlquilerYa!.png" height="45" width="95" />
     </a>
 
     <!-- Botón de menú desplegable -->
@@ -29,8 +29,14 @@
           <a class="nav-link" href="/favourite">Favoritos</a>
         </li>
 
-        <li class="nav-item">
-          <a class="nav-link" href="/login">Iniciar Sesión</a>
+        <!-- Mostrar Iniciar sesión si NO está logueado -->
+        <li class="nav-item" *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/login">Iniciar sesión</a>
+        </li>
+
+        <!-- Mostrar Cerrar sesión si está logueado -->
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a class="nav-link" (click)="logout()">Cerrar sesión</a>
         </li>
       </ul>
     </div>
