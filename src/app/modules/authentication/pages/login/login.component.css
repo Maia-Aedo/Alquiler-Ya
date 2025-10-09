@@ -1,40 +1,138 @@
-.container {
-    max-width: 400px;
-    margin: 5% auto;
+/* Contenedor general */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f9fc;
     padding: 20px;
+}
+
+/* Card */
+.login-card {
+    width: 100%;
+    max-width: 400px;
     background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 3px 3px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+    border-radius: 15px;
+    padding: 40px 30px 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
     text-align: center;
-    font-size: 24px;
+    position: relative;
 }
 
+/* Avatar */
+.login-avatar {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.login-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Título */
+.login-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs */
 form {
     display: flex;
     flex-direction: column;
+    gap: 15px;
 }
 
-input, button {
-    margin-bottom: 15px;
-    padding: 10px;
+.form-group {
+    text-align: left;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    color: #444;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 8px;
+    transition: border 0.3s;
 }
 
-label, input{
-    color: #272626;
+input:focus {
+    outline: none;
+    border-color: #007bff;
 }
 
+/* Botón */
 button {
-    background-color: #007bff;
+    padding: 12px;
+    border-radius: 8px;
+    background: #007bff;
     color: #fff;
+    font-weight: 600;
     border: none;
     cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover:enabled {
+    background: #0056b3;
+    transform: translateY(-2px);
 }
 
 button:disabled {
-    background-color: #ccc;
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Error */
+.error-message {
+    color: #d9534f;
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* Registro */
+.register-text {
+    margin-top: 20px;
+    font-size: 0.9rem;
+}
+
+.register-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+
+    .login-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .login-title {
+        font-size: 1.3rem;
+    }
 }

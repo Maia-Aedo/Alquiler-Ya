@@ -5,3 +5,8 @@
 
     background-color: var(--primary);
 }
+
+.nav-link {
+    color: var(--white);
+    cursor: pointer;
+}
