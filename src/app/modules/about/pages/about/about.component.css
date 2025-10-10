@@ -1,3 +1,15 @@
+/* about.component.css */
+.container {
+  padding: 1rem;
+}
+
+.about-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 @media(min-width: 300px) and (max-width: 760px){
   main {
     padding: 20px;
