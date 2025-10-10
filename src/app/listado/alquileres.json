@@ -1,0 +1,143 @@
+{
+  "alquileres": [
+    {
+      "id": 1,
+      "titulo": "Departamento moderno con vista al mar",
+      "lugar": "Mar del Plata, Buenos Aires",
+      "precio": 95000,
+      "cantidad_habitaciones": 2,
+      "wifi": true,
+      "valoracion": 4.8,
+      "cantidad_calificaciones": 37,
+      "imagen": "https://example.com/images/departamento-mar.jpg",
+      "descripcion": "Departamento luminoso con vista panorámica al mar, balcón y cocina equipada. Ideal para vacaciones o trabajo remoto.",
+      "normas": [
+        "No se permiten mascotas",
+        "No fumar dentro del departamento",
+        "Respetar horarios de descanso (22:00 a 08:00)"
+      ],
+      "propietario": "Laura González",
+      "descripcion_propietario": "Propietaria con más de 10 años de experiencia en alquileres turísticos. Vive en la zona y ofrece asistencia personalizada.",
+      "opiniones_publicas": [
+        {
+          "usuario": "Martina López",
+          "comentario": "Excelente lugar, muy limpio y con una vista increíble. Laura fue muy amable.",
+          "puntuacion": 5
+        },
+        {
+          "usuario": "Carlos Ramírez",
+          "comentario": "Todo perfecto, solo el WiFi era un poco lento.",
+          "puntuacion": 4
+        }
+      ],
+      "zona": "urbana",
+      "disponible": true,
+      "amueblado": true,
+      "ubicacion": {
+        "latitud": -38.0055,
+        "longitud": -57.5426,
+        "direccion": "Av. Colón 1450"
+      },
+      "metros_cuadrados": 75,
+      "servicios": [
+        "Agua caliente",
+        "Electricidad",
+        "WiFi",
+        "TV por cable",
+        "Cocina equipada"
+      ]
+    },
+    {
+      "id": 2,
+      "titulo": "Casa familiar con parrilla y patio amplio",
+      "lugar": "Córdoba Capital",
+      "precio": 125000,
+      "cantidad_habitaciones": 3,
+      "wifi": true,
+      "valoracion": 4.6,
+      "cantidad_calificaciones": 24,
+      "imagen": "https://example.com/images/casa-cordoba.jpg",
+      "descripcion": "Casa cómoda y amplia, ideal para familias. Cuenta con patio, parrilla y cochera privada.",
+      "normas": [
+        "Se permiten mascotas pequeñas",
+        "Prohibido realizar fiestas",
+        "Mantener limpia la zona de parrilla"
+      ],
+      "propietario": "Juan Pérez",
+      "descripcion_propietario": "Arquitecto y anfitrión experimentado. Le gusta recibir huéspedes y brindar recomendaciones locales.",
+      "opiniones_publicas": [
+        {
+          "usuario": "Ana Torres",
+          "comentario": "La casa es muy cómoda y está bien ubicada. Volveríamos sin dudar.",
+          "puntuacion": 5
+        },
+        {
+          "usuario": "Diego Martínez",
+          "comentario": "Muy buen lugar, solo faltaba mantenimiento en el jardín.",
+          "puntuacion": 4
+        }
+      ],
+      "zona": "urbana",
+      "disponible": false,
+      "amueblado": true,
+      "ubicacion": {
+        "latitud": -31.4201,
+        "longitud": -64.1888,
+        "direccion": "Barrio Nueva Córdoba, Calle San Luis 520"
+      },
+      "metros_cuadrados": 120,
+      "servicios": [
+        "Agua corriente",
+        "Gas natural",
+        "WiFi",
+        "Cochera privada",
+        "Parrilla"
+      ]
+    },
+    {
+      "id": 3,
+      "titulo": "Monoambiente céntrico para estudiantes",
+      "lugar": "Rosario, Santa Fe",
+      "precio": 60000,
+      "cantidad_habitaciones": 1,
+      "wifi": false,
+      "valoracion": 4.1,
+      "cantidad_calificaciones": 12,
+      "imagen": "https://example.com/images/monoambiente-rosario.jpg",
+      "descripcion": "Pequeño monoambiente funcional ubicado en el centro, a pasos de universidades y transporte público.",
+      "normas": [
+        "No se permiten mascotas",
+        "No fumar",
+        "Respetar horarios de convivencia"
+      ],
+      "propietario": "Sofía Morales",
+      "descripcion_propietario": "Joven anfitriona que alquila a estudiantes durante el año académico.",
+      "opiniones_publicas": [
+        {
+          "usuario": "Lucas Fernández",
+          "comentario": "Muy buena ubicación y precio accesible. Ideal para estudiar.",
+          "puntuacion": 4
+        },
+        {
+          "usuario": "Camila Díaz",
+          "comentario": "El departamento es pequeño pero cumple. Falta WiFi.",
+          "puntuacion": 3
+        }
+      ],
+      "zona": "centrica",
+      "disponible": true,
+      "amueblado": false,
+      "ubicacion": {
+        "latitud": -32.9442,
+        "longitud": -60.6505,
+        "direccion": "Calle Tucumán 1345"
+      },
+      "metros_cuadrados": 35,
+      "servicios": [
+        "Electricidad",
+        "Agua corriente",
+        "Gas natural"
+      ]
+    }
+  ]
+}
