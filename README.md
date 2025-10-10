@@ -79,5 +79,5 @@ Configuración utilizada (`typedoc.json`)
 Este proyecto fue desarrollado por:
 
 - **Maia Aedo** – [@Maia-Aedo](https://github.com/Maia-Aedo) – aedomaia10@gmail.com
-- **Victoria Diaz]** – [@toia-19](https://github.com/toia-19) – victoriaangelinadiaz@gmail.com
+- **Victoria Diaz** – [@toia-19](https://github.com/toia-19) – victoriaangelinadiaz@gmail.com
 - **Melina Ulloa** – [@MeliUlloa](https://github.com/MeliUlloa) – melinaulloa98@gmail.com
