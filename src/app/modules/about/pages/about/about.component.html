@@ -1,32 +1,21 @@
+<!-- about.component.html -->
 <div class="container-fluid">
   <div class="row">
     <!-- Sidebar -->
     <nav class="col-md-3 col-lg-2 sidebar">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            [class.active]="activeSection === 'overview'"
-            (click)="setActiveSection('overview')"
-          >
+          <a class="nav-link" [class.active]="activeSection === 'overview'" (click)="setActiveSection('overview')">
             Sobre nosotros
           </a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            [class.active]="activeSection === 'faq'"
-            (click)="setActiveSection('faq')"
-          >
+          <a class="nav-link" [class.active]="activeSection === 'faq'" (click)="setActiveSection('faq')">
             Preguntas frecuentes
           </a>
         </li>
         <li class="nav-item">
-          <a
-            class="nav-link"
-            [class.active]="activeSection === 'tacs'"
-            (click)="setActiveSection('tacs')"
-          >
+          <a class="nav-link" [class.active]="activeSection === 'tacs'" (click)="setActiveSection('tacs')">
             Términos y condiciones
           </a>
         </li>
@@ -36,54 +25,63 @@
     <!-- Main Content -->
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <section *ngIf="activeSection === 'overview'">
-        <h2>¿Quiénes somos?</h2>
-        <p>
-          Somos un grupo de estudiantes apasionados por la tecnología, la
-          innovación y la mejora continua. Nuestra historia comienza en las
-          aulas, donde decidimos unir nuestras habilidades y conocimientos para
-          crear un proyecto que pudiera ayudar a resolver una necesidad real en
-          nuestra comunidad.
-        </p>
-        <p>
-          A lo largo de nuestros estudios, nos dimos cuenta de que muchas
-          personas tenían dificultades para encontrar una plataforma que se
-          adaptara completamente a sus necesidades, ya fuera en el ámbito de la
-          búsqueda de viviendas, el alquiler de propiedades o simplemente la
-          falta de información clara y accesible en el sector inmobiliario.
-        </p>
-        <p>
-          Por eso, creamos este proyecto: un sitio web que no solo conecta a
-          propietarios e inquilinos, sino que también brinda soluciones
-          prácticas y adaptadas a las demandas del mercado actual. Nuestro
-          enfoque se centra en la facilidad de uso, la accesibilidad y la
-          personalización, asegurando que todos puedan encontrar lo que
-          necesitan con tan solo unos clics.
-        </p>
-        <p>
-          Desde el principio, hemos trabajado con el objetivo de proporcionar
-          una plataforma útil, eficiente y confiable, que sea capaz de resolver
-          los problemas que enfrentan tanto arrendadores como inquilinos,
-          adaptándonos a las necesidades cambiantes del sector.
-        </p>
-        <h2>Nuestro compromiso</h2>
-        <p>
-          Como estudiantes, nos hemos comprometido a aprender, mejorar y
-          evolucionar junto con nuestro proyecto. Sabemos que la tecnología
-          avanza rápidamente y que las necesidades de las personas también
-          cambian. Por eso, trabajamos constantemente para hacer que nuestro
-          sitio web sea aún más intuitivo, seguro y completo.
-        </p>
-        <p>
-          Lo que nos motiva es ver cómo nuestro esfuerzo y dedicación impactan
-          positivamente en la vida de las personas. Cada propiedad alquilada a
-          través de nuestra plataforma es una confirmación de que estamos en el
-          camino correcto.
-        </p>
-        <p>
-          Estamos orgullosos de lo que hemos logrado hasta ahora y emocionados
-          por lo que el futuro nos depara. ¡Gracias por ser parte de nuestra
-          comunidad!
-        </p>
+        <div class="container">
+          <h2 class="subtitulo">¿Quiénes somos?</h2>
+          <div class="about-section">
+            Somos un grupo de estudiantes apasionados por la tecnología, la
+            innovación y la mejora continua. Nuestra historia comienza en las
+            aulas, donde decidimos unir nuestras habilidades y conocimientos para
+            crear un proyecto que pudiera ayudar a resolver una necesidad real en
+            nuestra comunidad. 🤓
+          </div>
+
+          <div class="about-section">
+            A lo largo de nuestros estudios, nos dimos cuenta de que muchas
+            personas tenían dificultades para encontrar una plataforma que se
+            adaptara completamente a sus necesidades, ya fuera en el ámbito de la
+            búsqueda de viviendas, el alquiler de propiedades o simplemente la
+            falta de información clara y accesible en el sector inmobiliario.
+          </div>
+
+          <div class="about-section">
+            Por eso, creamos este proyecto: un sitio web que no solo conecta a
+            propietarios e inquilinos, sino que también brinda soluciones
+            prácticas y adaptadas a las demandas del mercado actual. 🤝 Nuestro
+            enfoque se centra en la facilidad de uso, la accesibilidad y la
+            personalización, asegurando que todos puedan encontrar lo que
+            necesitan con tan solo unos clics.
+          </div>
+
+          <div class="about-section">
+            Desde el principio, hemos trabajado con el objetivo de proporcionar
+            una plataforma útil, eficiente y confiable, que sea capaz de resolver
+            los problemas que enfrentan tanto arrendadores como inquilinos,
+            adaptándonos a las necesidades cambiantes del sector.
+          </div>
+
+          <h2 class="subtitulo">Nuestro compromiso</h2>
+
+          <div class="about-section">
+            Como estudiantes, nos hemos comprometido a aprender, mejorar y
+            evolucionar junto con nuestro proyecto. Sabemos que la tecnología
+            avanza rápidamente y que las necesidades de las personas también
+            cambian. Por eso, trabajamos constantemente para hacer que nuestro
+            sitio web sea aún más intuitivo, seguro y completo.
+          </div>
+
+          <div class="about-section">
+            Lo que nos motiva es ver cómo nuestro esfuerzo y dedicación impactan
+            positivamente en la vida de las personas. Cada propiedad alquilada a
+            través de nuestra plataforma es una confirmación de que estamos en el
+            camino correcto. 🏠
+          </div>
+
+          <div class="about-section">
+            Estamos orgullosos de lo que hemos logrado hasta ahora y emocionados
+            por lo que el futuro nos depara. ¡Gracias por ser parte de nuestra
+            comunidad!
+          </div>
+        </div>
         <img src="equipo3.jpeg" alt="Nuestro equipo" class="img-fluid" />
       </section>
       <section *ngIf="activeSection === 'faq'">
