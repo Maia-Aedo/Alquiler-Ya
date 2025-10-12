@@ -1,9 +1,15 @@
-main h1 {
-  font-size: 2rem;
-  margin-bottom: 15px;
+/* tac.component.css */
+.container {
+  padding: 1rem;
 }
 
-main p {
-  font-size: 1.1rem;
-  line-height: 1.6;
+.tac-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.inicio, .fin {
+  font-weight: 600;
 }
