@@ -25,6 +25,7 @@
     "@cds/core": "^6.14.0",
     "@clr/angular": "^16.6.0",
     "@clr/ui": "^16.6.0",
+    "@google/model-viewer": "^4.1.0",
     "@ng-bootstrap/ng-bootstrap": "^15.1.2",
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3",

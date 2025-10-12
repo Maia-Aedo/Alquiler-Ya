@@ -5,21 +5,35 @@
         <p>Te ayudaremos a encontrar el mejor alojamiento con facilidad y confort desde cualquier lugar</p>
         <button class="btn header_btn">Empezar</button>
 
-        <!-- BUSCADOR -->
-        <div class="search-container mt-4 mx-auto">
-            <div class="row g-2 align-items-center">
-                <div class="col-md-5 col-12">
-                    <input type="text" class="form-control" placeholder="Ingresa ciudad" />
-                </div>
-                <div class="col-md-5 col-12">
-                    <input type="text" class="form-control" placeholder="Casa, departamento..." />
-                </div>
-                <div class="col-md-2 col-12">
-                    <button class="btn search-button w-100">Buscar</button>
-                </div>
-            </div>
+       <!-- BUSCADOR -->
+    <div class="search-container mt-4 mx-auto">
+      <div class="row g-2 align-items-center">
+        <div class="col-md-5 col-12">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Ingresa ciudad"
+            [(ngModel)]="ciudad"
+            name="ciudad"
+            (keypress)="soloLetras($event)"
+          />
         </div>
+        <div class="col-md-5 col-12">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Casa, departamento..."
+            [(ngModel)]="tipoPropiedad"
+            name="tipoPropiedad"
+            (keypress)="soloTexto($event)"
+          />
+        </div>
+        <div class="col-md-2 col-12">
+          <button class="btn search-button w-100" (click)="buscar()">Buscar</button>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
 
 <!-- CARDS -->

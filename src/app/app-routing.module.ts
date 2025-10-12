@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './modules/home/pages/home/home.component';
 import { LoginComponent } from './modules/authentication/pages/login/login.component';
 import { authGuard } from './guards/auth.guard';
+import { PruebaComponent } from './test/prueba/prueba.component';
 
 /**
  * Rutas principales de la aplicación.
@@ -15,6 +16,9 @@ import { authGuard } from './guards/auth.guard';
 const routes: Routes = [
   {
     path: '', component: LoginComponent
+  },
+   {
+    path: 'prueba', component: PruebaComponent
   },
   {
     path: '', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),

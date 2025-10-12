@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 // IMPORTAMOS COMPONENTES GLOBALES
 import { SharedModule } from './modules/shared/shared.module';
@@ -27,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
    * Componentes declarados en este módulo.
    */
   declarations: [
-    AppComponent
+    AppComponent,
   ],
 
   /**
@@ -41,7 +42,8 @@ import { HttpClientModule } from '@angular/common/http';
     // Módulo con componentes reutilizables a lo largo de la aplicación
     SharedModule,
 
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
 
   /**
