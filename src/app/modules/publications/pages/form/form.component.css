@@ -1,0 +1,102 @@
+/* === Estilos del Login/Register (copiados para consistencia) === */
+
+/* Contenedor general */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f7f9fc;
+    padding: 20px;
+}
+
+/* Card */
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 40px 30px 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+/* Título */
+.login-title { /* Usamos esta clase para 'Nueva Publicación' */
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Inputs y Textarea */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    text-align: left;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 5px;
+    display: block;
+    color: #444;
+}
+
+/* Aplicar estilos tanto a input como a textarea */
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Ajuste específico para el textarea de descripción */
+textarea {
+    resize: vertical; /* Permite solo redimensionar verticalmente */
+    height: 120px;
+}
+
+/* Botón */
+button {
+    padding: 12px;
+    border-radius: 8px;
+    background: #007bff;
+    color: #fff;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover:enabled {
+    background: #0056b3;
+    transform: translateY(-2px);
+}
+
+button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-card {
+        padding: 30px 20px;
+    }
+
+    .login-title {
+        font-size: 1.3rem;
+    }
+}

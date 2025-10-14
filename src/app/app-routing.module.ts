@@ -32,7 +32,16 @@ const routes: Routes = [
   },
   {
     path: '', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
-  }
+  },
+  {
+  path: 'publications',
+  loadChildren: () =>
+    import('./modules/publications/publications.module').then(
+      (m) => m.PublicationsModule
+    ),
+  canActivate: [authGuard],
+}
+
 ];
 
 /**

@@ -1,0 +1,36 @@
+<div class="login-container">
+  <div class="login-card"> 
+    <h1 class="login-title">Nueva Publicación</h1> 
+    
+    <form [formGroup]="form" (ngSubmit)="onSubmit()"> 
+      <div class="form-group">
+        <label for="titulo">Título</label>
+        <input id="titulo" type="text" formControlName="titulo" placeholder="Ej: Departamento en el centro">
+      </div>
+
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" formControlName="descripcion" placeholder="Describe tu alojamiento..."></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="ubicacion">Ubicación</label>
+        <input id="ubicacion" type="text" formControlName="ubicacion" placeholder="Ej: San Miguel de Tucumán">
+      </div>
+
+      <div class="form-group">
+        <label for="precio">Precio por noche</label>
+        <input id="precio" type="number" formControlName="precio" placeholder="Ej: 15000">
+      </div>
+
+      <div class="form-group">
+        <label for="imagen">URL de imagen</label>
+        <input id="imagen" type="text" formControlName="imagen" placeholder="https://...">
+      </div>
+
+      <button type="submit" [disabled]="form.invalid">
+        <i class="bi bi-check-circle"></i> Guardar publicación
+      </button>
+    </form>
+  </div>
+</div>
