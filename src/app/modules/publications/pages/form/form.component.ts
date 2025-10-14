@@ -1,6 +1,8 @@
+
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { createNewPublication } from '../../mock.db'; // ⬅️ Importamos la función
 
 @Component({
   selector: 'app-form',
@@ -14,7 +16,7 @@ export class FormComponent {
     this.form = this.fb.group({
       titulo: ['', Validators.required],
       descripcion: [''],
-      ubicacion: [''],
+      ubicacion: [''], // Este campo se mapeará a 'lugar' y a 'ubicacion.direccion' en el mock
       precio: ['', Validators.required],
       imagen: ['']
     });
@@ -22,8 +24,12 @@ export class FormComponent {
 
   onSubmit() {
     if (this.form.valid) {
-      console.log('Publicación enviada:', this.form.value);
-      // Lógica futura: enviar al backend o Firebase
+      // Llamamos a la función que hace el 'push' a localStorage
+      createNewPublication(this.form.value); 
+      
+      console.log('Publicación creada y guardada localmente.');
+
+      // Redirigimos al ListComponent, que se recargará con el nuevo ítem.
       this.router.navigate(['/publications']);
     }
   }

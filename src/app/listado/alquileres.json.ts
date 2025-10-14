@@ -1,5 +1,4 @@
-{
-  "alquileres": [
+export const ALQUILERES_INICIALES = [
     {
       "id": 1,
       "titulo": "Departamento moderno con vista al mar",
@@ -9,7 +8,7 @@
       "wifi": true,
       "valoracion": 4.8,
       "cantidad_calificaciones": 37,
-      "imagen": "https://example.com/images/departamento-mar.jpg",
+      "imagen": "https://images.unsplash.com/photo-1543558526-35fdd56df604?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
       "descripcion": "Departamento luminoso con vista panorámica al mar, balcón y cocina equipada. Ideal para vacaciones o trabajo remoto.",
       "normas": [
         "No se permiten mascotas",
@@ -56,7 +55,7 @@
       "wifi": true,
       "valoracion": 4.6,
       "cantidad_calificaciones": 24,
-      "imagen": "https://example.com/images/casa-cordoba.jpg",
+      "imagen": "https://images.unsplash.com/photo-1624409990662-03f19cc0e0cc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
       "descripcion": "Casa cómoda y amplia, ideal para familias. Cuenta con patio, parrilla y cochera privada.",
       "normas": [
         "Se permiten mascotas pequeñas",
@@ -103,7 +102,7 @@
       "wifi": false,
       "valoracion": 4.1,
       "cantidad_calificaciones": 12,
-      "imagen": "https://example.com/images/monoambiente-rosario.jpg",
+      "imagen": "https://plus.unsplash.com/premium_photo-1663089331117-b4176fef4c9a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
       "descripcion": "Pequeño monoambiente funcional ubicado en el centro, a pasos de universidades y transporte público.",
       "normas": [
         "No se permiten mascotas",
@@ -139,5 +138,4 @@
         "Gas natural"
       ]
     }
-  ]
-}
+  ]; 

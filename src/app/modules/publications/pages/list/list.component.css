@@ -1,5 +1,5 @@
 :root {
-  --primary: #ff9900;
+  --primary: #1da7a1;
   --secondary: #64b5f6;
   --gray: #969696;
   --bg-dark: #2e2e2e;
@@ -14,11 +14,9 @@
 }
 
 .titulo {
-  font-family: var(--font-title);
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  color: var(--primary);
+  font-size: 2rem; /* Título principal */
+    font-weight: bold; /* Títulos grandes suelen ser audaces */
+    margin-bottom: 0.5rem;
 }
 
 .empty-state {
@@ -51,12 +49,12 @@
 }
 
 .btn-primary {
-  background-color: var(--primary);
+ background-color: #1da7a1;
   color: white;
 }
 
 .btn-primary:hover {
-  background: #1da7a1;
+   background: #14807b;
 }
 
 .btn-secondary {
@@ -122,4 +120,20 @@
   font-weight: bold;
   color: var(--primary);
   font-size: 1.1rem;
+}
+
+.pub-location-link {
+    /* Estilo del texto */
+    font-size: 0.9em;
+    color: #555; /* Color sutil */
+    text-decoration: none; /* Quita el subrayado predeterminado */
+    
+    /* Hace que se vea como un enlace al pasar el ratón */
+    cursor: pointer; 
+    transition: color 0.2s;
+}
+
+.pub-location-link:hover {
+    color: #007bff; /* Color azul al pasar el ratón */
+    text-decoration: underline; /* Subrayar al pasar el ratón */
 }

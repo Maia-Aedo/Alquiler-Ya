@@ -1,35 +1,35 @@
 <div class="publications-container">
-  <h1 class="titulo">Mis Publicaciones</h1>
+    <h1 class="titulo">Mis Publicaciones</h1>
 
-  <!-- Estado vacío -->
-  <div *ngIf="publicaciones.length === 0" class="empty-state">
-    <i class="bi bi-house-slash icon-empty"></i>
-    <p class="subtitulo">Aún no cargaste ninguna publicación.</p>
-    <button class="btn-primary" (click)="goToNew()">
-      <i class="bi bi-plus-circle"></i> Cargar mi primera publicación
-    </button>
-  </div>
-
-  <!-- Lista de publicaciones -->
-  <div *ngIf="publicaciones.length > 0" class="list-section">
-    <div class="list-header">
-      <h2 class="subtitulo">Tus alojamientos</h2>
-      <button class="btn-secondary" (click)="goToNew()">
-        <i class="bi bi-plus"></i> Nueva publicación
-      </button>
+    <!-- Estado vacío -->
+    <div *ngIf="publicaciones.length === 0" class="empty-state">
+        <i class="bi bi-house-slash icon-empty"></i>
+        <p class="subtitulo">Aún no cargaste ninguna publicación.</p>
+        <button class="btn-primary" (click)="goToNew()">
+            <i class="bi bi-plus-circle"></i> Cargar mi primera publicación
+        </button>
     </div>
 
-    <div class="cards">
-      <div *ngFor="let pub of publicaciones" class="pub-card">
-        <img [src]="pub.imagen" alt="Publicación" class="pub-image" />
-        <div class="pub-content">
-          <h3>{{ pub.titulo }}</h3>
-          <p class="pub-location">
-            <i class="bi bi-geo-alt"></i> {{ pub.ubicacion }}
-          </p>
-          <p class="pub-price">$ {{ pub.precio }}</p>
+    <!-- Lista de publicaciones -->
+    <div *ngIf="publicaciones.length > 0" class="list-section">
+        <div class="list-header">
+            <h2 class="subtitulo">Tus propiedades</h2>
+            <button class="btn-secondary" (click)="goToNew()">
+                <i class="bi bi-plus"></i> Nueva propiedad
+            </button>
         </div>
-      </div>
+
+        <div class="cards">
+            <div *ngFor="let pub of publicaciones" class="pub-card">
+                <img [src]="pub.imagen" alt="Publicación" class="pub-image" />
+                <div class="pub-content">
+                    <h3>{{ pub.titulo }}</h3>
+                    <a class="pub-location-link" (click)="openMap(pub)" href="javascript:void(0)">
+                        <i class="bi bi-geo-alt"></i> {{ pub.lugar }}
+                    </a>
+                    <p class="pub-price">$ {{ pub.precio }}</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
