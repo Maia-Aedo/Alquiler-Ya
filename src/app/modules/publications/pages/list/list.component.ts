@@ -1,45 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ALQUILERES_INICIALES } from 'src/app/listado/alquileres.json';
-
-// Definición de las interfaces para que coincidan con la estructura del JSON
-interface UbicacionDetalle {
-  latitud: number;
-  longitud: number;
-  direccion: string;
-}
-
-interface Opinion {
-  usuario: string;
-  comentario: string;
-  puntuacion: number;
-}
-
-interface Publicacion {
-  // Campos utilizados en el listado y el formulario
-  id: number;
-  titulo: string;
-  lugar: string; // Este es el string que usas para la ubicación en la tarjeta
-  precio: number;
-  imagen: string;
-
-  // Campos complejos del JSON que causaban el error
-  cantidad_habitaciones: number;
-  wifi: boolean;
-  valoracion: number;
-  cantidad_calificaciones: number;
-  descripcion: string;
-  normas: string[];
-  propietario: string;
-  descripcion_propietario: string;
-  opiniones_publicas: Opinion[];
-  zona: string;
-  disponible: boolean;
-  amueblado: boolean;
-  ubicacion: UbicacionDetalle; // Este campo era el principal conflicto
-  metros_cuadrados: number;
-  servicios: string[];
-}
+import { Publicacion } from 'src/app/models/publicacion';
 
 @Component({
   selector: 'app-list',
@@ -49,7 +11,7 @@ interface Publicacion {
 export class ListComponent implements OnInit {
   publicaciones: Publicacion[] = [];
 
-  constructor(private router: Router) {}
+  constructor(private router: Router) { }
 
 
   ngOnInit(): void {
@@ -58,7 +20,7 @@ export class ListComponent implements OnInit {
 
   loadPublications(): void {
     const storedPublications = window.localStorage.getItem('publicaciones');
-    
+
     if (storedPublications) {
       // Cargamos lo que el usuario guardó (incluyendo los iniciales si ya se guardaron)
       this.publicaciones = JSON.parse(storedPublications);
@@ -70,7 +32,7 @@ export class ListComponent implements OnInit {
     }
   }
 
-   openMap(publicacion: Publicacion): void {
+  openMap(publicacion: Publicacion): void {
     const lat = publicacion.ubicacion.latitud;
     const lng = publicacion.ubicacion.longitud;
 
