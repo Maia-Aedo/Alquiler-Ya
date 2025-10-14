@@ -1,0 +1,59 @@
+<section class="testimonial-area" *ngIf="testimonials?.length">
+    <div class="container">
+        <div class="sec-title white-title text-center">
+            <h2>Testimonios</h2>
+            <p>Qué dicen nuestros clientes</p>
+        </div>
+
+        <div class="testimonial-carousel" #carousel (mouseenter)="pause()" (mouseleave)="resume()"
+            (touchstart)="onTouchStart($event)" (touchmove)="onTouchMove($event)" (touchend)="onTouchEnd()"
+            role="region" aria-label="Carrusel de testimonios">
+
+            <div class="carousel-viewport">
+                <div class="slides-track" #slidesContainer [style.width.%]="testimonials.length * 100"
+                    [style.transform]="'translateX(-' + (currentIndex * (100 / testimonials.length)) + '%)'">
+
+                    <div *ngFor="let testimonial of testimonials; let i = index" class="single-testimonial"
+                        [attr.aria-hidden]="currentIndex !== i" [style.width.%]="100 / testimonials.length" role="group"
+                        [attr.aria-roledescription]="'testimonial'"
+                        [attr.aria-label]="'Testimonio de ' + testimonial.name">
+
+                        <div class="testimonial-inner">
+                            <p class="testimonial-text">“{{ testimonial.text }}”</p>
+
+                            <div class="client-info">
+                                <div class="client-avatar">
+                                    <img [src]="testimonial.avatar" [alt]="'Foto de ' + testimonial.name" />
+                                </div>
+                                <div class="client-details">
+                                    <h6>{{ testimonial.name }}</h6>
+                                    <span class="client-role">{{ testimonial.role }}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CONTROLES (overlay) - solo si hay más de 1 slide -->
+            <div class="carousel-controls" *ngIf="testimonials.length > 1" aria-hidden="false">
+
+                <button class="nav-btn nav-left" (click)="goToPrev()" aria-label="Anterior testimonio" type="button">
+                    <span class="visually-hidden">Anterior</span>❮
+                </button>
+
+                <button class="nav-btn nav-right" (click)="goToNext()" aria-label="Siguiente testimonio" type="button">
+                    <span class="visually-hidden">Siguiente</span>❯
+                </button>
+
+                <div class="carousel-dots" role="tablist" aria-label="Seleccionar testimonio">
+                    <button *ngFor="let t of testimonials; let i = index" class="dot"
+                        [class.active]="currentIndex === i" (click)="goToSlide(i)"
+                        [attr.aria-label]="'Ir al testimonio ' + (i + 1)"
+                        [attr.aria-current]="currentIndex === i ? 'true' : null" type="button">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

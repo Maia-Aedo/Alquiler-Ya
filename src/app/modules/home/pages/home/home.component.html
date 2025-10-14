@@ -3,37 +3,25 @@
     <div class="container text-header text-center">
         <h1>Encuentra la estadía perfecta para tu próxima aventura</h1>
         <p>Te ayudaremos a encontrar el mejor alojamiento con facilidad y confort desde cualquier lugar</p>
-        <button class="btn header_btn">Empezar</button>
+        <button class="btn header_btn">Explorar propiedades</button>
 
-       <!-- BUSCADOR -->
-    <div class="search-container mt-4 mx-auto">
-      <div class="row g-2 align-items-center">
-        <div class="col-md-5 col-12">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Ingresa ciudad"
-            [(ngModel)]="ciudad"
-            name="ciudad"
-            (keypress)="soloLetras($event)"
-          />
+        <!-- BUSCADOR -->
+        <div class="search-container mt-4 mx-auto">
+            <div class="row g-2 align-items-center">
+                <div class="col-md-5 col-12">
+                    <input type="text" class="form-control" placeholder="Ingresa ciudad" [(ngModel)]="ciudad"
+                        name="ciudad" (keypress)="soloLetras($event)" />
+                </div>
+                <div class="col-md-5 col-12">
+                    <input type="text" class="form-control" placeholder="Casa, departamento..."
+                        [(ngModel)]="tipoPropiedad" name="tipoPropiedad" (keypress)="soloLetras($event)" />
+                </div>
+                <div class="col-md-2 col-12">
+                    <button class="btn search-button w-100" (click)="buscar()">Buscar</button>
+                </div>
+            </div>
         </div>
-        <div class="col-md-5 col-12">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Casa, departamento..."
-            [(ngModel)]="tipoPropiedad"
-            name="tipoPropiedad"
-            (keypress)="soloLetras($event)"
-          />
-        </div>
-        <div class="col-md-2 col-12">
-          <button class="btn search-button w-100" (click)="buscar()">Buscar</button>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
 
 <!-- CARDS -->
@@ -109,12 +97,15 @@
     </div>
 </section>
 
+<!-- RESEÑAS -->
+<app-reviews></app-reviews>
 
 <!-- PROPIETARIO PARALLAX --->
 <section class="parallax-prop d-flex align-items-center justify-content-center">
     <div class="overlay"></div>
     <div class="text-center text-white position-relative">
-        <h2>Reserva tu próxima estadía hoy</h2>
-        <button class="btn register-btn mt-3" routerLink="/register">Deseo registrarme</button>
+        <h2>Reserva Tu Próxima Estadía Hoy</h2>
+        <button class="btn register-btn mt-3" routerLink="/register">Crear cuenta</button>
+        <p class="p-2">Regístrate gratis y empieza a reservar hoy mismo.</p>
     </div>
 </section>

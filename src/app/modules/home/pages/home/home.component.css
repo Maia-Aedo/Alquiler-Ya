@@ -108,7 +108,7 @@ section {
 
 /* DIVIDER */
 #divider {
-    margin-bottom: 75px;
+    margin-bottom: 5rem;
 }
 
 .divider-card {
@@ -151,6 +151,7 @@ section {
 
 /* PARALLAX */
 .parallax-prop {
+    margin-top: 5rem;
     position: relative;
     height: 60vh;
     background: url("../../../../../assets/images//inicio/parallax.jpg") center/cover fixed no-repeat;

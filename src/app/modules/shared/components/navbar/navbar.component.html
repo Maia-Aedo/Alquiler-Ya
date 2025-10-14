@@ -36,8 +36,7 @@
               [attr.aria-expanded]="isDropdownOpen" aria-haspopup="true">
               <i class="bi bi-person-circle me-1"></i> Mi cuenta
             </button>
-            <ul class="dropdown-menu dropdown-menu-end" [class.show]="isDropdownOpen"
-              [@dropdownAnimation]="isDropdownOpen ? 'open' : 'closed'" role="menu">
+            <ul class="dropdown-menu dropdown-menu-end" [class.show]="isDropdownOpen" role="menu">
               <li><a class="dropdown-item" routerLink="/home" (click)="closeDropdown()">Mi perfil</a></li>
               <li><a class="dropdown-item" routerLink="/publications" (click)="closeDropdown()">Mis propiedades</a></li>
               <li><a class="dropdown-item" routerLink="/favourite" (click)="closeDropdown()">Favoritos</a></li>

@@ -17,30 +17,26 @@ const routes: Routes = [
   {
     path: '', component: HomeComponent
   },
-   {
+  {
     path: 'prueba', component: PruebaComponent
   },
   {
     path: '', loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule),
   },
   {
-    path: '', loadChildren: () => import('./modules/post/post.module').then(m => m.PostModule),
+    path: 'publicacion', loadChildren: () => import('./modules/post/post.module').then(m => m.PostModule),
     canActivate: [authGuard]
   },
   {
-    path: '', loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule)
+    path: 'login', loadChildren: () => import('./modules/authentication/authentication.module').then(m => m.AuthenticationModule)
   },
   {
-    path: '', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
+    path: 'about', loadChildren: () => import('./modules/about/about.module').then(m => m.AboutModule)
   },
   {
-  path: 'publications',
-  loadChildren: () =>
-    import('./modules/publications/publications.module').then(
-      (m) => m.PublicationsModule
-    ),
-  canActivate: [authGuard],
-}
+    path: 'publications', loadChildren: () => import('./modules/publications/publications.module').then((m) => m.PublicationsModule),
+    canActivate: [authGuard],
+  }
 
 ];
 

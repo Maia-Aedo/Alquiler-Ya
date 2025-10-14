@@ -1,0 +1,441 @@
+/* ===== Contenedor y título ===== */
+.testimonial-area {
+    padding: 80px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-area::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.sec-title {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.sec-title h2 {
+    font-size: 2.75rem;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    position: relative;
+    display: inline-block;
+}
+
+.sec-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #0ea5a3, #14b8b6);
+    border-radius: 2px;
+}
+
+.sec-title p {
+    font-size: 1.15rem;
+    color: #64748b;
+    margin-top: 16px;
+    font-weight: 400;
+}
+
+/* ===== Carrusel ===== */
+.testimonial-carousel {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+}
+
+.slides-track {
+    display: flex;
+    transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    align-items: stretch;
+}
+
+.single-testimonial {
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.testimonial-inner {
+    width: 100%;
+    padding: 50px 45px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border-radius: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    overflow: hidden;
+}
+
+.single-testimonial:hover .testimonial-inner {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 70px rgba(15, 23, 42, 0.12),
+        0 12px 28px rgba(15, 23, 42, 0.06);
+}
+
+/* Comillas decorativas */
+.testimonial-inner::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    font-size: 100px;
+    font-family: Georgia, serif;
+    color: rgba(14, 165, 162, 0.338);
+    line-height: 1;
+    pointer-events: none;
+}
+
+/* Texto del testimonio */
+.testimonial-text {
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #334155;
+    margin: 0 0 30px 0;
+    font-style: italic;
+    max-width: 850px;
+    letter-spacing: 0.2px;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
+/* Info del cliente */
+.client-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.client-avatar {
+    position: relative;
+}
+
+.client-avatar::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #0ea5a3, #14b8b6);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.single-testimonial:hover .client-avatar::after {
+    opacity: 1;
+}
+
+.client-avatar img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.single-testimonial:hover .client-avatar img {
+    transform: scale(1.05);
+}
+
+.client-details {
+    text-align: left;
+}
+
+.client-details h6 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 4px 0;
+    color: #0f172a;
+}
+
+.client-role {
+    display: block;
+    font-size: 0.95rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+/* ===== CONTROLES ===== */
+.carousel-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    gap: 20px;
+    z-index: 60;
+    padding: 0 16px;
+}
+
+/* Botones laterales modernos */
+.nav-btn {
+    pointer-events: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #ffffff;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.3);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 70;
+    backdrop-filter: blur(10px);
+}
+
+.nav-left {
+    left: -20px;
+}
+
+.nav-right {
+    right: -20px;
+}
+
+.nav-btn:hover {
+    transform: translateY(-50%) scale(1.08);
+    background: linear-gradient(135deg, #0ea5a3, #14b8b6);
+    box-shadow: 0 12px 40px rgba(14, 165, 163, 0.4);
+}
+
+.nav-btn:active {
+    transform: translateY(-50%) scale(0.98);
+}
+
+.nav-btn:focus {
+    outline: 3px solid rgba(14, 165, 163, 0.4);
+    outline-offset: 4px;
+}
+
+/* Dots mejorados */
+.carousel-dots {
+    pointer-events: auto;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 12px 20px;
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(15, 23, 42, 0.12);
+    z-index: 70;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #cbd5e1;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+
+.dot::after {
+    content: '';
+    position: absolute;
+    inset: -6px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #94a3b8;
+    transform: scale(1.2);
+}
+
+.dot:hover::after {
+    border-color: rgba(148, 163, 184, 0.3);
+}
+
+.dot.active {
+    width: 32px;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, #0ea5a3, #14b8b6);
+    box-shadow: 0 4px 12px rgba(14, 165, 163, 0.3);
+}
+
+.dot.active::after {
+    border-color: transparent;
+}
+
+/* ===== Responsive ===== */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+@media (max-width: 1024px) {
+    .nav-left {
+        left: -10px;
+    }
+
+    .nav-right {
+        right: -10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .sec-title h2 {
+        font-size: 2.25rem;
+    }
+
+    .testimonial-inner {
+        padding: 40px 35px;
+    }
+
+    .testimonial-text {
+        font-size: 1.05rem;
+        max-width: 95%;
+    }
+
+    .client-avatar img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .circle-1 {
+        width: 140px;
+        height: 140px;
+        top: -45px;
+        right: -45px;
+    }
+
+    .circle-2 {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .testimonial-area {
+        padding: 60px 0 80px;
+    }
+
+    .nav-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem;
+    }
+
+    .nav-left {
+        left: 5px;
+    }
+
+    .nav-right {
+        right: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .sec-title h2 {
+        font-size: 1.9rem;
+    }
+
+    .testimonial-inner {
+        padding: 35px 28px;
+    }
+
+    .testimonial-inner::before {
+        font-size: 70px;
+        top: 15px;
+        left: 20px;
+    }
+
+    .carousel-controls {
+        bottom: -40px;
+    }
+
+    .carousel-dots {
+        padding: 10px 16px;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+
+    .nav-left,
+    .nav-right {
+        display: none;
+    }
+
+    .carousel-controls {
+        position: relative;
+        bottom: 0;
+        margin-top: 30px;
+    }
+
+    .carousel-dots {
+        gap: 8px;
+        padding: 10px 14px;
+    }
+
+    .slides-track {
+        transition-duration: 0.6s;
+    }
+
+    .carousel-viewport {
+        padding: 5px;
+    }
+
+    .testimonial-inner {
+        padding: 30px 24px;
+    }
+}

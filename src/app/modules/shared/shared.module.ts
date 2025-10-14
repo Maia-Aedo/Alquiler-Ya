@@ -7,6 +7,8 @@ import { FooterComponent } from './components/footer/footer.component';
 
 // Importación del enrutamiento para navegación desde componentes
 import { AppRoutingModule } from 'src/app/app-routing.module';
+import { ReviewsComponent } from './components/reviews/reviews.component';
+import { RouterModule } from '@angular/router';
 
 /**
  * Módulo compartido (`SharedModule`) que contiene componentes reutilizables 
@@ -24,7 +26,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
    */
   declarations: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ReviewsComponent
   ],
 
   /**
@@ -32,7 +35,7 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
    */
   imports: [
     CommonModule,
-    AppRoutingModule
+    RouterModule
   ],
 
   /**
@@ -40,7 +43,8 @@ import { AppRoutingModule } from 'src/app/app-routing.module';
    */
   exports: [
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    ReviewsComponent
   ]
 })
 export class SharedModule { }
