@@ -1,54 +1,19 @@
-<!-- <div class="container">
-    <h1 class="subtitulo">Alquileres destacados en ejemplo</h1>
-
-    <div class="row">
-        <div class="col-2 card-map">
-            <iframe
-                src=""
-                width="300" height="225" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-
-        <div class="col-8 card-container">
-            <div class="cards">
-                <div class="pub-card">
-                    <div class="pub-img-content">
-                        <img src="https://images.pexels.com/photos/5406476/pexels-photo-5406476.jpeg" alt="Publicación"
-                            class="pub-image" />
-                    </div>
-                    <div class="pub-content">
-                        <h3>Titulo</h3>
-                        <a class="pub-location-link" href="">
-                            <i class="bi bi-geo-alt"></i>
-                            Ubicación
-                        </a>
-                        <p class="pub-price">$1000</p>
-                        <button class="btn btn-secondary">Contactar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
- -->
-
-<!-- test -->
+<!-- all-publication.component.html -->
 <div class="container" *ngIf="ciudad && publicaciones.length > 0">
-    <h1 class="subtitulo">Alquileres destacados en {{ ciudad }}</h1>
+    <h1 class="titulo">Alquileres destacados en {{ ciudad }}</h1>
 
     <div class="row">
         <!-- MAPA -->
         <div class="col-2 card-map mb-4">
-            <iframe [src]="ciudadMapa" width="100%" height="225" style="border:0;" allowfullscreen loading="lazy"
+            <iframe [src]="ciudadMapa" height="225" style="border:0;" allowfullscreen loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
 
         <!-- TARJETAS -->
         <div class="col-8 card-container">
-            <div class="cards">
-                <div class="pub-card mb-2" *ngFor="let pub of publicaciones">
+            <div class="cards" *ngFor="let pub of publicaciones">
+                <div class="pub-card">
                     <div class="pub-img-content">
                         <img [src]="pub.imagen" [alt]="pub.titulo" class="pub-image" />
                     </div>

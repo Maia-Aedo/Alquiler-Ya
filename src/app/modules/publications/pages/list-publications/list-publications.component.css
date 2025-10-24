@@ -1,0 +1,35 @@
+/* list-publications.css */
+/* ESTRUCTURAS GENERALES */
+.container {
+    margin: auto;
+    display: block;
+
+    padding: 1rem;
+}
+
+.row {
+    justify-content: start;
+    flex-direction: row;
+
+    margin: 1em;
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+.subtitulo {
+    font-size: large;
+}
+
+.card {
+    height: 100%;
+}
+
+img {
+    height: 18rem;
+    width: 100%;
+    padding: 1rem;
+
+    object-fit: cover;
+}

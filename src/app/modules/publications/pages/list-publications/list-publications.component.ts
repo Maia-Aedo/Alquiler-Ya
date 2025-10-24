@@ -1,3 +1,4 @@
+// list-publications.component.ts
 import { Component } from '@angular/core';
 import { ALQUILERES_INICIALES } from 'src/app/listado/alquileres.json';
 

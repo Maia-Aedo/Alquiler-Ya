@@ -1,3 +1,4 @@
+/* all-publication.component.css */
 :root {
     --primary: #1da7a1;
     --secondary: #64b5f6;
@@ -74,6 +75,7 @@
     gap: 1.5rem;
     margin: 1em 0em;
     border-radius: 1em;
+    width: 100%;
 }
 
 .pub-card {

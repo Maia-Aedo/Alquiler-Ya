@@ -1,15 +1,19 @@
+<!-- list-publications-component.html -->
 <div class="container">
-    <h1 class="subtitulo">Propiedades destacadas</h1>
+    <h1 class="titulo">Propiedades destacadas</h1>
 
     <div class="row">
-        <div class="col-md-4 mb-4" *ngFor="let pub of publicaciones">
-            <div class="card h-100">
+        <div class="col-4 mb-4" *ngFor="let pub of publicaciones">
+            <div class="card">
                 <img [src]="pub.imagen" [alt]="pub.titulo" class="card-img-top" />
                 <div class="card-body">
                     <h5 class="card-title">{{ pub.titulo }}</h5>
                     <p class="card-text">{{ pub.lugar }}</p>
                     <p class="card-text"><strong>${{ pub.precio | number }}</strong></p>
-                    <button class="btn btn-primary" [routerLink]="['/publications/detail', pub.id]">Ver más</button>
+
+                    <div class="boton">
+                        <button class="btn btn-primary" [routerLink]="['/publications/detail', pub.id]">Ver más</button>
+                    </div>
                 </div>
             </div>
         </div>
