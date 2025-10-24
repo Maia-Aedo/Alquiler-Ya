@@ -13,7 +13,7 @@ export const ALQUILERES_INICIALES = [
         "wifi": true,
         "valoracion": 4.7,
         "cantidad_calificaciones": 22,
-        "imagen": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=687",
+        "imagen": "../assets/images/ciudad/cipolletti-casa-jardin.jpg",
         "descripcion": "Casa familiar con jardín y cochera, ideal para estadías largas.",
         "normas": [
           "Se permiten mascotas",
@@ -54,7 +54,7 @@ export const ALQUILERES_INICIALES = [
         "wifi": true,
         "valoracion": 4.3,
         "cantidad_calificaciones": 15,
-        "imagen": "https://images.unsplash.com/photo-1588854337118-1c1d7b6c3b5e?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=687",
+        "imagen": "../assets/images/ciudad/cipolletti-departamento-moderno.jpg",
         "descripcion": "Departamento moderno cerca de comercios y transporte.",
         "normas": [
           "No se permiten mascotas",
@@ -102,7 +102,7 @@ export const ALQUILERES_INICIALES = [
         "wifi": true,
         "valoracion": 4.8,
         "cantidad_calificaciones": 37,
-        "imagen": "https://images.unsplash.com/photo-1543558526-35fdd56df604?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=687",
+        "imagen": "../assets/images/ciudad/mardelplata-departamento-vistamar.jpg",
         "descripcion": "Departamento luminoso con vista panorámica al mar, balcón y cocina equipada. Ideal para vacaciones o trabajo remoto.",
         "normas": [
           "No se permiten mascotas",
@@ -149,7 +149,7 @@ export const ALQUILERES_INICIALES = [
         "wifi": true,
         "valoracion": 4.5,
         "cantidad_calificaciones": 19,
-        "imagen": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=687",
+        "imagen": "../assets/images/ciudad/mardelplata-departamento-centrico.jpg",
         "descripcion": "Departamento céntrico con terraza privada, ideal para parejas o viajes de trabajo.",
         "normas": [
           "No se permiten fiestas",
@@ -197,7 +197,7 @@ export const ALQUILERES_INICIALES = [
         "wifi": false,
         "valoracion": 4.2,
         "cantidad_calificaciones": 10,
-        "imagen": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.1.0&auto=format&fit=crop&q=80&w=687",
+        "imagen": "../assets/images/ciudad/lasgrutas-cabaña-rustica.jpg",
         "descripcion": "Cabaña simple a metros de la playa, ideal para desconectarse.",
         "normas": [
           "No se permiten fiestas",
