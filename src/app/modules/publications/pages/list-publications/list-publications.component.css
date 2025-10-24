@@ -1,11 +1,16 @@
 /* list-publications.css */
 /* ESTRUCTURAS GENERALES */
-img {
-    height: 18rem;
-    width: 100%;
-    padding: 1rem;
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
 
-    object-fit: cover;
+img {
+  height: 18rem;
+  width: 100%;
+  padding: 1rem;
+
+  object-fit: cover;
 }
 
 .publications-container {
