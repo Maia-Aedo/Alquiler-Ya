@@ -41,20 +41,21 @@
 }
 
 .pub-image {
-    width: 100%;
-    height: auto;
+    width: 20rem;
+    height: 225px;
     max-height: 250px;
     object-fit: cover;
     border-radius: 1rem;
 }
 
 .pub-content {
-    /* padding: 1rem; */
+    margin-left: .2rem;
     background-color: #5ABACF;
 }
 
 .pub-content h3 {
     font-size: 1.2rem;
+    margin-top: 1rem;
     margin-bottom: 0.4rem;
 }
 
