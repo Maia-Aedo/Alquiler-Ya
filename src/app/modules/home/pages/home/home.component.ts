@@ -17,6 +17,18 @@ export class HomeComponent {
   alquileres = ALQUILERES_INICIALES;
   alquileresFiltrados = ALQUILERES_INICIALES;
 
+  ngOnInit(): void {
+    setTimeout(() => {
+      this.alquileres = ALQUILERES_INICIALES;
+      this.alquileresFiltrados = ALQUILERES_INICIALES;
+    }, 0);
+  }
+
+
+  trackByTexto(index: number, item: string): string {
+    return item;
+  }
+
   constructor(private router: Router) { }
 
   // Validación: permite letras, números y espacios (sin símbolos)

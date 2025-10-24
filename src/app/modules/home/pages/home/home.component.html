@@ -4,7 +4,7 @@
     <div class="container text-header text-center">
         <h1>Encuentra la estadía perfecta para tu próxima aventura</h1>
         <p>Te ayudaremos a encontrar el mejor alojamiento con facilidad y confort desde cualquier lugar</p>
-        <button class="btn header_btn">Explorar propiedades</button>
+        <button class="btn header_btn" routerLink="/publications/list-publications">Explorar propiedades</button>
 
         <!-- BUSCADOR -->
         <div class="search-container mt-4 mx-auto">
@@ -14,9 +14,9 @@
                     <input type="text" class="form-control" placeholder="Ingresa ciudad" [(ngModel)]="ciudad"
                         name="ciudad" (input)="filtrarCiudades()" (keydown.enter)="cerrarSugerencias()"
                         (keypress)="soloLetras($event)" />
-                    <ul class="list-group position-absolute w-100 mt-1" [class.visible]="ciudadesFiltradas.length"
-                        [class.oculto]="!ciudadesFiltradas.length">
-                        <li class="list-group-item list-group-item-action" *ngFor="let sugerida of ciudadesFiltradas"
+                    <ul *ngIf="ciudadesFiltradas.length" class="list-group position-absolute w-100 mt-1">
+                        <li class="list-group-item list-group-item-action"
+                            *ngFor="let sugerida of ciudadesFiltradas; trackBy: trackByTexto"
                             (click)="ciudad = sugerida; cerrarSugerencias()">
                             {{ sugerida }}
                         </li>
@@ -28,13 +28,14 @@
                     <input type="text" class="form-control" placeholder="Casa, departamento..."
                         [(ngModel)]="tipoPropiedad" name="tipoPropiedad" (input)="filtrarTipos()"
                         (keydown.enter)="cerrarSugerencias()" (keypress)="soloLetras($event)" />
-                    <ul class="list-group position-absolute w-100 mt-1" [class.visible]="tiposFiltrados.length"
-                        [class.oculto]="!tiposFiltrados.length">
-                        <li class="list-group-item list-group-item-action" *ngFor="let tipo of tiposFiltrados"
+                    <ul *ngIf="tiposFiltrados.length" class="list-group position-absolute w-100 mt-1">
+                        <li class="list-group-item list-group-item-action"
+                            *ngFor="let tipo of tiposFiltrados; trackBy: trackByTexto"
                             (click)="tipoPropiedad = tipo; cerrarSugerencias()">
                             {{ tipo }}
                         </li>
                     </ul>
+
                 </div>
 
                 <!-- BOTÓN -->
@@ -53,7 +54,7 @@
     <div class="row g-4">
         <div class="col-md-3 col-12">
             <div class="card h-100">
-                <img src="../../../../../assets/images/inicio/house.jpeg" class="card-img" alt="..." />
+                <img src="../../../../../assets/images/inicio/house.jpeg" class="card-img" alt="..." loading="lazy" />
                 <div class="card-body d-flex align-items-end">
                     <h5 class="card-title">Casa</h5>
                 </div>
@@ -61,7 +62,7 @@
         </div>
         <div class="col-md-3 col-12">
             <div class="card h-100">
-                <img src="../../../../../assets/images/inicio/city.jpg" class="card-img" alt="..." />
+                <img src="../../../../../assets/images/inicio/city.jpg" class="card-img" alt="..." loading="lazy" />
                 <div class="card-body d-flex align-items-end">
                     <h5 class="card-title">Ciudad</h5>
                 </div>
@@ -69,7 +70,7 @@
         </div>
         <div class="col-md-3 col-12">
             <div class="card h-100">
-                <img src="../../../../../assets/images/inicio/beach.jpg" class="card-img" alt="..." />
+                <img src="../../../../../assets/images/inicio/beach.jpg" class="card-img" alt="..." loading="lazy" />
                 <div class="card-body d-flex align-items-end">
                     <h5 class="card-title">Playa</h5>
                 </div>
@@ -77,7 +78,8 @@
         </div>
         <div class="col-md-3 col-12">
             <div class="card h-100">
-                <img src="../../../../../assets/images/inicio/cabin.jpg" height="100%" class="card-img" alt="..." />
+                <img src="../../../../../assets/images/inicio/cabin.jpg" height="100%" class="card-img" alt="..."
+                    loading="lazy" />
                 <div class="card-body d-flex align-items-end">
                     <h5 class="card-title">Cabaña</h5>
                 </div>
