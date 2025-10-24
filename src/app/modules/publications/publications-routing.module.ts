@@ -7,8 +7,8 @@ import { ViewPublicationComponent } from './pages/view-publication/view-publicat
 import { ListPublicationsComponent } from './pages/list-publications/list-publications.component';
 
 const routes: Routes = [
-  { path: '', component: ListComponent }, // /publications
-  { path: 'new', component: FormComponent }, // /publications/new
+  { path: '', component: ListComponent },
+  { path: 'new', component: FormComponent },
   { path: 'list-publications', component: ListPublicationsComponent },
   { path: 'all-publications', component: AllPublicationComponent },
   { path: 'detail/:id', component: ViewPublicationComponent }
