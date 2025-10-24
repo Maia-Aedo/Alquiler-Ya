@@ -1,29 +1,29 @@
-<!-- all-publication.component.html -->
 <div class="container" *ngIf="ciudad && publicaciones.length > 0">
     <h1 class="titulo">Alquileres destacados en {{ ciudad }}</h1>
 
-    <div class="row">
+    <div class="row gx-4 gy-4">
         <!-- MAPA -->
-        <div class="col-2 card-map mb-4">
-            <iframe [src]="ciudadMapa" height="225" style="border:0;" allowfullscreen loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
+        <div class="col-12 col-md-4">
+            <div class="card-map">
+                <iframe [src]="ciudadMapa" height="225" style="border:0;" allowfullscreen loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
         </div>
 
         <!-- TARJETAS -->
-        <div class="col-8 card-container">
-            <div class="cards" *ngFor="let pub of publicaciones">
-                <div class="pub-card">
+        <div class="col-12 col-md-8">
+            <div class="cards">
+                <div *ngFor="let pub of publicaciones" class="pub-card flex-column flex-md-row">
                     <div class="pub-img-content">
-                        <img [src]="pub.imagen" [alt]="pub.titulo" class="pub-image" />
+                        <img [src]="pub.imagen" [alt]="pub.titulo" class="pub-image" loading="lazy" />
                     </div>
                     <div class="pub-content">
                         <h3>{{ pub.titulo }}</h3>
                         <a class="pub-location-link"
                             [href]="'https://www.google.com/maps/search/?api=1&query=' + pub.ubicacion.direccion"
                             target="_blank">
-                            <i class="bi bi-geo-alt"></i>
-                            {{ pub.lugar }}
+                            <i class="bi bi-geo-alt"></i> {{ pub.lugar }}
                         </a>
                         <p class="pub-price">${{ pub.precio | number }}</p>
                         <button class="btn btn-secondary" [routerLink]="['/publications/detail', pub.id]">

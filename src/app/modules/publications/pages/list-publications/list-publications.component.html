@@ -1,20 +1,22 @@
 <!-- list-publications-component.html -->
-<div class="container">
+<div class="publications-container">
     <h1 class="titulo">Propiedades destacadas</h1>
 
-    <div class="row">
-        <div class="col-4 mb-4" *ngFor="let pub of publicaciones">
-            <div class="card">
-                <img [src]="pub.imagen" [alt]="pub.titulo" class="card-img-top" />
-                <div class="card-body">
-                    <h5 class="card-title">{{ pub.titulo }}</h5>
-                    <p class="card-text">{{ pub.lugar }}</p>
-                    <p class="card-text"><strong>${{ pub.precio | number }}</strong></p>
+    <div *ngIf="publicaciones.length === 0" class="empty-state">
+        <i class="bi bi-house-slash icon-empty"></i>
+        <p class="subtitulo">No hay propiedades destacadas en este momento.</p>
+    </div>
 
-                    <div class="boton">
-                        <button class="btn btn-primary" [routerLink]="['/publications/detail', pub.id]">Ver más</button>
-                    </div>
-                </div>
+    <div *ngIf="publicaciones.length > 0" class="cards">
+        <div *ngFor="let pub of publicaciones" class="pub-card">
+            <img [src]="pub.imagen" [alt]="pub.titulo" class="pub-image" loading="lazy" />
+            <div class="pub-content">
+                <h3>{{ pub.titulo }}</h3>
+                <p class="pub-location"><i class="bi bi-geo-alt"></i> {{ pub.lugar }}</p>
+                <p class="pub-price">$ {{ pub.precio | number }}</p>
+                <button class="btn btn-primary w-100 mt-2" [routerLink]="['/publications/detail', pub.id]">
+                    Ver más
+                </button>
             </div>
         </div>
     </div>

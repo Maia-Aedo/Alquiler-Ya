@@ -1,14 +1,17 @@
 <div class="container" *ngIf="publicacion">
+    <!-- Ubicación -->
     <p class="ubicacion-texto">{{ publicacion.lugar }} > {{ publicacion.zona }}</p>
-    <!-- Encabezado del post -->
-    <section class="encabezado-post d-flex justify-content-between align-items-start flex-wrap">
+
+    <!-- Encabezado -->
+    <section class="encabezado-post">
         <div class="info-principal">
             <div class="info-p">
-                <div class="info-p1" style="display: flex;">
+                <div class="info-p1 d-flex flex-wrap align-items-center gap-2">
                     <h1 class="titulo">{{ publicacion.titulo }}</h1>
-
-                    <small style="padding-top: .5rem; padding-left: 1rem;">
-                        <span class="estado-protegido"><i class="bi bi-shield-check"></i> Protegido</span>
+                    <small>
+                        <span class="estado-protegido">
+                            <i class="bi bi-shield-check"></i> Protegido
+                        </span>
                     </small>
                 </div>
 
@@ -23,29 +26,18 @@
                 </div>
             </div>
         </div>
-
-
-        <div class="acciones-post d-flex gap-3">
-            <!-- <button class="btn btn-icon" title="Llamar"><i class="bi bi-telephone"></i></button>
-            <button class="btn btn-icon" title="Compartir"><i class="bi bi-share"></i></button>
-            <button class="btn btn-icon" title="Guardar"><i class="bi bi-heart"></i></button> -->
-        </div>
-
     </section>
 
-    <!-- Imagen principal y acciones -->
+    <!-- Contenido principal -->
     <section class="contenido-post row mt-4">
-        <div class="col-md-7">
+        <div class="col-12 col-md-7 mb-4">
             <div class="imagen-principal">
-                <img [src]="publicacion.imagen" [alt]="publicacion.titulo" class="img-fluid rounded" />
-               <!--  <div class="acciones-imagen mt-2 d-flex gap-2">
-                    <button class="btn btn-outline-secondary"><i class="bi bi-box"></i> Ver en 3D</button>
-                    <button class="btn btn-outline-primary"><i class="bi bi-geo-alt"></i> Ver en mapa</button>
-                </div> -->
+                <img [src]="publicacion.imagen" [alt]="publicacion.titulo" class="img-fluid rounded w-100"
+                    loading="lazy" />
             </div>
         </div>
 
-        <div class="col-md-5">
+        <div class="col-12 col-md-5">
             <div class="servicios mb-3">
                 <h2 class="subtitulo">Servicios incluidos</h2>
                 <ul class="list-group">
@@ -62,7 +54,7 @@
         </div>
     </section>
 
-    <!-- Descripción y normas -->
+    <!-- Detalles -->
     <section class="detalle-post mt-5">
         <div class="descripcion mb-4">
             <h2 class="subtitulo">Descripción</h2>
