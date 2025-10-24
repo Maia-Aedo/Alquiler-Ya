@@ -226,6 +226,15 @@ section {
     }
 }
 
+ul.list-group.oculto {
+    display: none;
+}
+
+ul.list-group.visible {
+    display: block;
+    z-index: 1000;
+}
+
 
 /* RESPONSIVE CARDS 
 /* @media (min-width: 992px) {

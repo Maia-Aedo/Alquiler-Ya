@@ -1,3 +1,4 @@
+// home.component.ts
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { ALQUILERES_INICIALES } from 'src/app/listado/alquileres.json';
@@ -8,15 +9,17 @@ import { ALQUILERES_INICIALES } from 'src/app/listado/alquileres.json';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
+  // Inputs del buscador
   ciudad: string = '';
   tipoPropiedad: string = '';
 
-  constructor(private router: Router) { }
-
+  // Datos base y filtrados
   alquileres = ALQUILERES_INICIALES;
   alquileresFiltrados = ALQUILERES_INICIALES;
 
-  // Permitir letras, números y espacios (sin símbolos)
+  constructor(private router: Router) { }
+
+  // Validación: permite letras, números y espacios (sin símbolos)
   soloTexto(event: KeyboardEvent): void {
     const char = event.key;
     const regex = /^[a-zA-Z0-9áéíóúÁÉÍÓÚñÑ\s]+$/;
@@ -25,13 +28,23 @@ export class HomeComponent {
     }
   }
 
+  // Validación: permite solo letras, tildes y espacios
+  soloLetras(event: KeyboardEvent): void {
+    const char = event.key;
+    const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+    if (!regex.test(char)) {
+      event.preventDefault();
+    }
+  }
+
+  // Acción principal: buscar ciudad y tipo de propiedad en el JSON
   buscar(): void {
     const ciudadInput = this.ciudad.trim().toLowerCase();
     const tipoInput = this.tipoPropiedad.trim().toLowerCase();
 
-    // Buscar la ciudad dentro del JSON
-    const ciudadCoincidente = ALQUILERES_INICIALES.find(ciudad =>
-      ciudad.ciudad.toLowerCase().includes(ciudadInput)
+    // Buscar ciudad coincidente
+    const ciudadCoincidente = this.alquileres.find(item =>
+      item.ciudad.toLowerCase().includes(ciudadInput)
     );
 
     if (!ciudadCoincidente) {
@@ -39,13 +52,13 @@ export class HomeComponent {
       return;
     }
 
-    // Buscar la propiedad dentro de las opciones de esa ciudad
+    // Buscar propiedad dentro de esa ciudad
     const propiedadCoincidente = ciudadCoincidente.opciones.find(opcion =>
       opcion.titulo.toLowerCase().includes(tipoInput)
     );
 
     if (propiedadCoincidente) {
-      // Navegar al componente de publicaciones con parámetros
+      // Redirigir con parámetros de búsqueda
       this.router.navigate(['/publications/all-publications'], {
         queryParams: {
           ciudad: ciudadCoincidente.ciudad,
@@ -57,20 +70,40 @@ export class HomeComponent {
     }
   }
 
-
-  // Permitir solo letras, tildes y espacios
-  soloLetras(event: KeyboardEvent): void {
-    const char = event.key;
-    const regex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
-    if (!regex.test(char)) {
-      event.preventDefault();
-    }
-  }
-
+  // Restablecer campos y resultados
   limpiar(): void {
     this.ciudad = '';
     this.tipoPropiedad = '';
     this.alquileresFiltrados = this.alquileres;
   }
 
+  // Sugerencias dinámicas para autocompletar
+  ciudadesFiltradas: string[] = [];
+  tiposFiltrados: string[] = [];
+
+  // Listas base de sugerencias
+  sugerenciasCiudad: string[] = ['Cipolletti', 'Las Grutas', 'Mar del Plata'];
+  sugerenciasTipo: string[] = ['Casa', 'Departamento', 'Cabaña'];
+
+  // Filtrar sugerencias de ciudad según input
+  filtrarCiudades(): void {
+    const texto = this.ciudad?.toLowerCase() || '';
+    this.ciudadesFiltradas = this.sugerenciasCiudad
+      .filter(c => c.toLowerCase().includes(texto))
+      .slice(0, 3); // Limitar a 3 resultados
+  }
+
+  // Filtrar sugerencias de tipo de propiedad según input
+  filtrarTipos(): void {
+    const texto = this.tipoPropiedad?.toLowerCase() || '';
+    this.tiposFiltrados = this.sugerenciasTipo
+      .filter(t => t.toLowerCase().includes(texto))
+      .slice(0, 3); // Limitar a 3 resultados
+  }
+
+  // Ocultar sugerencias (al hacer clic fuera o presionar Enter)
+  cerrarSugerencias(): void {
+    this.ciudadesFiltradas = [];
+    this.tiposFiltrados = [];
+  }
 }

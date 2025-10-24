@@ -1,3 +1,4 @@
+<!-- home.component.html -->
 <!-- IMG BANNER -->
 <section id="header" class="hero d-flex align-items-center">
     <div class="container text-header text-center">
@@ -8,19 +9,41 @@
         <!-- BUSCADOR -->
         <div class="search-container mt-4 mx-auto">
             <div class="row g-2 align-items-center">
-                <div class="col-md-5 col-12">
+                <!-- CIUDAD -->
+                <div class="col-md-5 col-12 position-relative" (clickOutside)="cerrarSugerencias()">
                     <input type="text" class="form-control" placeholder="Ingresa ciudad" [(ngModel)]="ciudad"
-                        name="ciudad" (keypress)="soloLetras($event)" />
+                        name="ciudad" (input)="filtrarCiudades()" (keydown.enter)="cerrarSugerencias()"
+                        (keypress)="soloLetras($event)" />
+                    <ul class="list-group position-absolute w-100 mt-1" [class.visible]="ciudadesFiltradas.length"
+                        [class.oculto]="!ciudadesFiltradas.length">
+                        <li class="list-group-item list-group-item-action" *ngFor="let sugerida of ciudadesFiltradas"
+                            (click)="ciudad = sugerida; cerrarSugerencias()">
+                            {{ sugerida }}
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-md-5 col-12">
+
+                <!-- TIPO PROPIEDAD -->
+                <div class="col-md-5 col-12 position-relative" (clickOutside)="cerrarSugerencias()">
                     <input type="text" class="form-control" placeholder="Casa, departamento..."
-                        [(ngModel)]="tipoPropiedad" name="tipoPropiedad" (keypress)="soloLetras($event)" />
+                        [(ngModel)]="tipoPropiedad" name="tipoPropiedad" (input)="filtrarTipos()"
+                        (keydown.enter)="cerrarSugerencias()" (keypress)="soloLetras($event)" />
+                    <ul class="list-group position-absolute w-100 mt-1" [class.visible]="tiposFiltrados.length"
+                        [class.oculto]="!tiposFiltrados.length">
+                        <li class="list-group-item list-group-item-action" *ngFor="let tipo of tiposFiltrados"
+                            (click)="tipoPropiedad = tipo; cerrarSugerencias()">
+                            {{ tipo }}
+                        </li>
+                    </ul>
                 </div>
+
+                <!-- BOTÓN -->
                 <div class="col-md-2 col-12">
                     <button class="btn search-button w-100" (click)="buscar()">Buscar</button>
                 </div>
             </div>
         </div>
+
     </div>
 </section>
 
