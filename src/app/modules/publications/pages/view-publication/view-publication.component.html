@@ -1,0 +1,93 @@
+<div class="container" *ngIf="publicacion">
+    <!-- Parte superior post -->
+    <div class="row">
+        <section class="encabezado-post">
+            <div class="col-encabezado">
+                <h1 class="titulo">{{ publicacion.titulo }}</h1>
+                <i class="bi bi-shield-check i-verificado" title="Verificado"></i>
+
+                <div id="i-compartir">
+                    <i class="bi bi-telephone i-compartir" title="Llamar"></i>
+                    <i class="bi bi-share i-compartir" title="Compartir"></i>
+                    <i class="bi bi-heart i-compartir" title="Me gusta"></i>
+                </div>
+            </div>
+
+            <div class="col-encabezado" id="i-puntuacion">
+                <p class="p-extra-puntuacion">{{ publicacion.valoracion }}</p>
+                <ng-container *ngFor="let star of [1,2,3,4,5]">
+                    <i class="bi bi-star" [title]="star + '/5'"></i>
+                </ng-container>
+                <p class="p-extra-puntuacion">({{ publicacion.cantidad_calificaciones }})</p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Cuerpo principal post -->
+    <div class="row">
+        <section class="cuerpo-post">
+            <div class="col" id="imagenes-post">
+                <img [src]="publicacion.imagen" [alt]="publicacion.titulo" class="imgPrincipal" />
+
+                <ul>
+                    <li class="list-fotos" *ngFor="let i of [1,2,3,4]">
+                        <img [src]="publicacion.imagen" [alt]="'Vista adicional ' + i" class="imgOpcion" />
+                        <span *ngIf="i === 4">+ 5</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col" id="atajos">
+                <div class="servicios">
+                    <h2 class="subtitulo">Servicios incluidos:</h2>
+                    <ul>
+                        <li *ngFor="let servicio of publicacion.servicios">{{ servicio }}</li>
+                    </ul>
+                </div>
+
+                <div class="ubicacion">
+                    <h2 class="subtitulo">Ubicación:</h2>
+                    <p>{{ publicacion.ubicacion.direccion }}</p>
+                </div>
+
+                <div class="estado">
+                    <h2 class="subtitulo">Estado:</h2>
+                    <p>{{ publicacion.disponible ? 'Disponible' : 'No disponible' }}</p>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <!-- Pie de post -->
+    <div class="row">
+        <section class="pie-post">
+            <div class="col-informacion">
+                <div class="descripcion">
+                    <h2 class="subtitulo">Descripción:</h2>
+                    <p class="p-descripcion">{{ publicacion.descripcion }}</p>
+                </div>
+
+                <div class="normas">
+                    <h2 class="subtitulo">Normas:</h2>
+                    <ul>
+                        <li *ngFor="let norma of publicacion.normas">{{ norma }}</li>
+                    </ul>
+                </div>
+
+                <div class="info-inquilino">
+                    <h2 class="subtitulo">Inquilino:</h2>
+                    <p class="p-descripcion"><strong>{{ publicacion.propietario }}</strong>: {{
+                        publicacion.descripcion_propietario }}</p>
+                </div>
+
+                <div class="opiniones">
+                    <h2 class="subtitulo">Opiniones:</h2>
+                    <div *ngFor="let op of publicacion.opiniones_publicas">
+                        <p><strong>{{ op.usuario }}</strong>: "{{ op.comentario }}" ({{ op.puntuacion }}/5)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

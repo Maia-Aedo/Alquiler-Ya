@@ -1,0 +1,147 @@
+/* ESTRUCTURAS GENERALES */
+.container {
+    margin: auto;
+    display: block;
+
+    padding: 1rem;
+}
+
+.row {
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.titulo {
+    font-size: 2rem;
+}
+
+.subtitulo {
+    font-size: large;
+}
+
+/* PARTE SUPERIOR DE POST */
+.encabezado-post {
+    display: block;
+}
+
+.col-encabezado {
+    display: flex;
+}
+
+@media(min-width: 750px) {
+
+    /* Sección de íconos para compartir*/
+    #i-compartir {
+        display: block;
+
+        justify-content: space-between;
+    }
+
+    .i-verificado {
+        margin-right: 10rem;
+    }
+
+    /* Estilos a íconos */
+    .i-verificado,
+    .i-compartir {
+        font-size: 1.2rem;
+
+        padding: 0.4rem;
+    }
+
+    .imgPrincipal {
+        width: 30rem;
+    }
+}
+
+/* Sección de íconos de puntuación */
+#p-puntuacion,
+.p-extra-puntuacion,
+.bi-star {
+    padding: 0.2rem;
+
+    display: inline-block;
+}
+
+/* Íconos de estrellas */
+/*
+.bi-star{
+    padding: 0.2rem;
+}
+
+.bi-star:hover{
+    padding: 0.2rem;
+}*/
+
+/* PARTE PRINCIPAL DE POST */
+.cuerpo-post {
+    margin: auto;
+    display: flex;
+}
+
+#imagenes-post {
+    display: inline-block;
+
+    justify-content: space-around;
+
+    margin-bottom: 1em;
+}
+
+.list-fotos {
+    display: inline-block;
+}
+
+.imgOpcion {
+    width: 10rem;
+    padding: 1rem;
+}
+
+/* PARTE INFERIOR DE POST */
+.pie-post {
+    margin: auto;
+    display: flex;
+}
+
+.col-informacion {
+    display: inline-block;
+}
+
+/* ESTILOS PARA CELULAR */
+@media(min-width:350px) and (max-width: 750px) {
+    .container {
+        margin: auto;
+
+        padding: 1rem;
+    }
+
+    /* Íconos */
+    #i-compartir {
+        display: block;
+    }
+
+    .i-verificado {
+        margin-right: 0.5rem;
+    }
+
+    /* Estilos a íconos */
+    .i-verificado,
+    .i-compartir {
+        font-size: 1rem;
+
+        padding: 0.2rem;
+    }
+
+    /* Imágenes descriptivas */
+    .list-fotos {
+        justify-content: center;
+    }
+
+    .imgPrincipal {
+        width: 20rem;
+    }
+
+    .imgOpcion {
+        width: 8rem;
+        padding: 1rem;
+    }
+}

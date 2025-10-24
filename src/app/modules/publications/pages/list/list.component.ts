@@ -26,7 +26,7 @@ export class ListComponent implements OnInit {
       this.publicaciones = JSON.parse(storedPublications);
     } else {
       // Primera carga: usamos el JSON inicial
-      this.publicaciones = ALQUILERES_INICIALES as Publicacion[];
+      // this.publicaciones = ALQUILERES_INICIALES as Publicacion[];
       // Guardamos la lista inicial en localStorage para futuras cargas
       window.localStorage.setItem('publicaciones', JSON.stringify(ALQUILERES_INICIALES));
     }

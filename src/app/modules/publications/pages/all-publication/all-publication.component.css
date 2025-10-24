@@ -1,0 +1,146 @@
+:root {
+    --primary: #1da7a1;
+    --secondary: #64b5f6;
+    --gray: #969696;
+    --bg-dark: #2e2e2e;
+    --font-title: 'Phudu', cursive;
+    --font-body: 'Quicksand', sans-serif;
+}
+
+.row {
+    margin: 1em .5em;
+}
+
+.card-map {
+    margin: 1em 10em 0em 0em;
+}
+
+.card-container {
+    background-color: var(--primary);
+    border-radius: 1em;
+    margin: 1em .4em;
+    font-family: var(--font-body);
+    color: var(--bg-dark);
+}
+
+.titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.icon-empty {
+    font-size: 3.5rem;
+    color: var(--gray);
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    color: var(--bg-dark);
+}
+
+.btn-primary,
+.btn-secondary {
+    padding: 0.8rem 1.6rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #1da7a1;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #14807b;
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #3a91d8;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 1em 0em;
+    border-radius: 1em;
+}
+
+.pub-card {
+    display: flex;
+    overflow: hidden;
+    padding: .5em;
+    border-radius: 1rem;
+    background-color: #fafafa;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.pub-card:hover {
+    transform: translateY(-4px);
+}
+
+.pub-img-content {
+    width: 20rem;
+    margin: .5em;
+}
+
+.pub-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 1.5em;
+    background-color: #fafafa;
+}
+
+.pub-content {
+    padding: 1rem 1.2rem;
+    background-color: #fafafa;
+}
+
+.pub-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+}
+
+.pub-location {
+    font-size: 0.95rem;
+    color: var(--gray);
+    margin-bottom: 0.5rem;
+}
+
+.pub-price {
+    font-weight: bold;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.pub-location-link {
+    /* Estilo del texto */
+    font-size: 0.9em;
+    color: #555;
+    /* Color sutil */
+    text-decoration: none;
+    /* Quita el subrayado predeterminado */
+
+    /* Hace que se vea como un enlace al pasar el ratón */
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.pub-location-link:hover {
+    color: #007bff;
+    /* Color azul al pasar el ratón */
+    text-decoration: underline;
+    /* Subrayar al pasar el ratón */
+}
