@@ -1,7 +1,3 @@
-<!-- index.html: asegurate de tener el script (si no lo instalaste por npm) -->
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
-
-<!-- en tu componente HTML -->
 <model-viewer
   src="https://modelviewer.dev/shared-assets/models/House.glb"
   alt="Casa de ejemplo"
@@ -9,10 +5,18 @@
   ar-modes="webxr scene-viewer quick-look"
   camera-controls
   auto-rotate
-  poster="https://modelviewer.dev/assets/models/House/House.jpg"
-  style="width:100%; height:420px; border-radius:12px;">
-  <button slot="ar-button" style="
-    background:#ff9900;color:white;border:none;padding:0.6rem 1rem;border-radius:8px;font-weight:600;cursor:pointer;">
+  shadow-intensity="1"
+  style="width: 100%; height: 420px; border-radius: 12px;">
+  
+  <button slot="ar-button"
+    style="
+      background: #ff9900;
+      color: white;
+      border: none;
+      padding: 0.6rem 1rem;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;">
     👓 Ver en AR
   </button>
 </model-viewer>
